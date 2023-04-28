@@ -1,0 +1,149 @@
+[ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc"; @line = 1; ]
+import Toybox.Graphics;
+[ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc"; @line = 2; ]
+import Toybox.WatchUi;
+[ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc"; @line = 3; ]
+import Toybox.Lang;
+[ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc"; @line = 5; ]
+class BrekiTrekkerView extends WatchUi.View{
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc"; @line = 7; ]
+    function initialize() as Void {
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_7_26_start:
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc" 8 8 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_7_26_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc"; @line = 12; ]
+    function onLayout(dc as Dc) as Void {
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_12_40_start:
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc" 13 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :setLayout;
+        %tmp.4 = getv ? :Rez;
+        %tmp.5 = getv %tmp.4 :Layouts;
+        %tmp.6 = getv function %tmp.5 :MainLayout;
+        %tmp.8 = lgetv %dc;
+        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
+        invoke %tmp.1 %tmp.2(%tmp.9);
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc" 15 8 ]
+        %tmp.10 = self;
+        %tmp.11 = getv function %tmp.10 :findDrawableById;
+        %tmp.12 = "timer";
+        %tmp.13 = invoke %tmp.10 %tmp.11(%tmp.12);
+        putv self :timerElement %tmp.13;
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc" 17 8 ]
+        %tmp.14 = self;
+        %tmp.15 = getv function %tmp.14 :updateTimer;
+        %tmp.16 = 5;
+        invoke %tmp.14 %tmp.15(%tmp.16);
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_12_40_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc"; @line = 23; ]
+    function onShow() as Void {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc"; @line = 27; ]
+    function onUpdate(dc as Dc) as Void {
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_27_40_start:
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc" 29 8 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :onUpdate;
+        %tmp.5 = lgetv %dc;
+        invoke %tmp.2 %tmp.3(%tmp.5);
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_27_40_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc"; @line = 35; ]
+    function onHide() as Void {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc"; @line = 38; ]
+    function updateTimer(time as Number) as Void {
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_38_49_start:
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc" 39 8 ]
+        [ "D_src_BrekiTrekker_source_BrekiTrekkerView_mc_38_49_start" "D_src_BrekiTrekker_source_BrekiTrekkerView_mc_38_49_stop" ]
+        %minutes.1 = local;
+        %tmp.2 = getv ? :Math;
+        %tmp.3 = getv function %tmp.2 :floor;
+        %tmp.5 = lgetv %time;
+        %tmp.6 = 60;
+        %tmp.7 = div %tmp.5 %tmp.6;
+        %tmp.8 = invoke %tmp.2 %tmp.3(%tmp.7);
+        lputv %minutes.1 %tmp.8;
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc" 40 8 ]
+        [ "D_src_BrekiTrekker_source_BrekiTrekkerView_mc_38_49_start" "D_src_BrekiTrekker_source_BrekiTrekkerView_mc_38_49_stop" ]
+        %seconds.2 = local;
+        %tmp.10 = lgetv %time;
+        %tmp.11 = 60;
+        %tmp.12 = mod %tmp.10 %tmp.11;
+        lputv %seconds.2 %tmp.12;
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc" 43 8 ]
+        [ "D_src_BrekiTrekker_source_BrekiTrekkerView_mc_38_49_start" "D_src_BrekiTrekker_source_BrekiTrekkerView_mc_38_49_stop" ]
+        %timeStr.3 = local;
+        %tmp.13 = self;
+        %tmp.14 = getv function %tmp.13 :_zeroPadded;
+        %tmp.16 = lgetv %minutes.1;
+        %tmp.17 = invoke %tmp.13 %tmp.14(%tmp.16);
+        %tmp.18 = ":";
+        %tmp.19 = add %tmp.17 %tmp.18;
+        %tmp.20 = self;
+        %tmp.21 = getv function %tmp.20 :_zeroPadded;
+        %tmp.23 = lgetv %seconds.2;
+        %tmp.24 = invoke %tmp.20 %tmp.21(%tmp.23);
+        %tmp.25 = add %tmp.19 %tmp.24;
+        lputv %timeStr.3 %tmp.25;
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc" 45 8 ]
+        %tmp.27 = getv ? :timerElement;
+        %tmp.28 = getv function %tmp.27 :setText;
+        %tmp.30 = lgetv %timeStr.3;
+        invoke %tmp.27 %tmp.28(%tmp.30);
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc" 48 8 ]
+        %tmp.31 = getm $.Toybox.WatchUi;
+        %tmp.32 = getv function %tmp.31 :requestUpdate;
+        invoke %tmp.31 %tmp.32();
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_38_49_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc"; @line = 51; ]
+    function _zeroPadded(num as Number) as String {
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_51_50_start:
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc" 52 8 ]
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_52_8_if_stmt:
+        %tmp.2 = lgetv %num;
+        %tmp.3 = 10;
+        %tmp.4 = lt %tmp.2 %tmp.3;
+        bf %tmp.4 @D_src_BrekiTrekker_source_BrekiTrekkerView_mc_52_8_if_false;
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_52_8_if_true:
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_52_22_start:
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc" 53 12 ]
+        %tmp.5 = "0";
+        %tmp.6 = lgetv %num;
+        %tmp.7 = getv function %tmp.6 :toString;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = add %tmp.5 %tmp.8;
+        ret %tmp.9;
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_52_22_stop:
+        goto @D_src_BrekiTrekker_source_BrekiTrekkerView_mc_52_8_if_end;
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_52_8_if_false:
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_54_15_start:
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc" 55 12 ]
+        %tmp.10 = lgetv %num;
+        %tmp.11 = getv function %tmp.10 :toString;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        ret %tmp.12;
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_54_15_stop:
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_52_8_if_end:
+D_src_BrekiTrekker_source_BrekiTrekkerView_mc_51_50_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc"; @line = 59; @position = 16; ]
+    private
+    var timerElement;
+}
+[ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerView.mc"; @line = 1; ]
+<init> {
+}

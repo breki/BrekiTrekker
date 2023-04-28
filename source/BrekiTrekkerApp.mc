@@ -18,9 +18,16 @@ class BrekiTrekkerApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() as Array<Views or InputDelegates>? {
-        return [ new BrekiTrekkerView(), new BrekiTrekkerDelegate() ] as Array<Views or InputDelegates>;
+        activityView = new BrekiTrekkerView();
+        return [ activityView, new BrekiTrekkerDelegate() ] 
+        as Array<Views or InputDelegates>;
     }
 
+    function getActivityView() as BrekiTrekkerView {
+        return activityView;
+    }
+
+    private var activityView;
 }
 
 function getApp() as BrekiTrekkerApp {
