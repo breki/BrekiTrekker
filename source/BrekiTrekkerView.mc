@@ -13,7 +13,7 @@ class BrekiTrekkerView extends WatchUi.View {
     function onLayout(dc as Dc) as Void {
         setLayout(Rez.Layouts.MainLayout(dc));
 
-        timerElement = findDrawableById("timer");
+        activityDisplay = findDrawableById("activity_display");
 
         var activityRunning = false;
         updateView(activityRunning, new Duration(0));
@@ -40,24 +40,11 @@ class BrekiTrekkerView extends WatchUi.View {
     function updateView(
         activityRunning as Boolean, activityDuration as Duration) as Void {
 
-        if (activityRunning) {
-            var activityDurationInSeconds = activityDuration.value();
-            var minutes = Math.floor(activityDurationInSeconds / 60);
-            var seconds = activityDurationInSeconds % 60;
-
-            // display time in MM:SS format
-            var timeStr = Lang.format(
-                "$1$:$2$", [minutes.format("%02d"), seconds.format("%02d")]);
-
-            timerElement.setText(timeStr);
-        }
-        else {
-            timerElement.setText("00:00");
-        }
+        activityDisplay.updateData(activityRunning, activityDuration);
 
         // Request a call to the onUpdate() method for the current View
         WatchUi.requestUpdate();
     }
 
-    private var timerElement;
+    private var activityDisplay;
 }

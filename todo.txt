@@ -1,1 +1,1 @@
-- implement a custom drawable instead of using text labels
+- expose a class containing the activity data so can pass this around
