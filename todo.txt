@@ -1,2 +1,1 @@
-- render the pre-start display differently
-- expose a class containing the activity data so can pass this around
+- handle stopping of the activity

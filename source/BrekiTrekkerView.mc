@@ -15,8 +15,7 @@ class BrekiTrekkerView extends WatchUi.View {
 
         activityDisplay = findDrawableById("activity_display");
 
-        var activityRunning = false;
-        updateView(activityRunning, new Duration(0));
+        updateView(ActivityData.initial());
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -37,10 +36,9 @@ class BrekiTrekkerView extends WatchUi.View {
     function onHide() as Void {
     }
 
-    function updateView(
-        activityRunning as Boolean, activityDuration as Duration) as Void {
+    function updateView(activityData as ActivityData) as Void {
 
-        activityDisplay.updateData(activityRunning, activityDuration);
+        activityDisplay.updateData(activityData);
 
         // Request a call to the onUpdate() method for the current View
         WatchUi.requestUpdate();

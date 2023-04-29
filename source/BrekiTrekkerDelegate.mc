@@ -19,7 +19,7 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
 
     // on the SELECT button press
     function onSelect() as Boolean {
-        if (!inProgress) {
+        if (!activityData.activityRunning) {
             _startTimer();
         } 
 
@@ -27,9 +27,7 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function _startTimer() {
-        inProgress = true;
-        startTime = Time.now();
-
+        activityData.startActivity();
         activityTimer = new Timer.Timer();
         var repeat = true; // the Timer will repeat until stop() is called
         activityTimer.start(method(:_updateActivityView), 1000, repeat);
@@ -38,14 +36,10 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function _updateActivityView() as Void {
-        var activityDuration = Time.now().subtract(startTime);
-
-        var activityRunning = true;
-        activityView.updateView(activityRunning, activityDuration);
+        activityView.updateView(activityData);
     }
 
-    private var inProgress = false;
-    private var startTime;
+    private var activityData = new ActivityData();
     private var activityTimer;
     private var activityView = getApp().getActivityView();
 }
