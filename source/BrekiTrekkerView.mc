@@ -39,15 +39,21 @@ class BrekiTrekkerView extends WatchUi.View {
 
     function updateView(
         activityRunning as Boolean, activityDuration as Duration) as Void {
-        var activityDurationInSeconds = activityDuration.value();
-        var minutes = Math.floor(activityDurationInSeconds / 60);
-        var seconds = activityDurationInSeconds % 60;
 
-        // display time in MM:SS format
-        var timeStr = Lang.format(
-            "$1$:$2$", [minutes.format("%02d"), seconds.format("%02d")]);
+        if (activityRunning) {
+            var activityDurationInSeconds = activityDuration.value();
+            var minutes = Math.floor(activityDurationInSeconds / 60);
+            var seconds = activityDurationInSeconds % 60;
 
-        timerElement.setText(timeStr);
+            // display time in MM:SS format
+            var timeStr = Lang.format(
+                "$1$:$2$", [minutes.format("%02d"), seconds.format("%02d")]);
+
+            timerElement.setText(timeStr);
+        }
+        else {
+            timerElement.setText("00:00");
+        }
 
         // Request a call to the onUpdate() method for the current View
         WatchUi.requestUpdate();
