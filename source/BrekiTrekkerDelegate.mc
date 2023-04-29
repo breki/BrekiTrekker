@@ -17,18 +17,23 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
         return true;
     }
 
+    // on the SELECT button press
     function onSelect() as Boolean {
         if (!inProgress) {
-            inProgress = true;
-            startTime = Time.now();
-            updateTimer = new Timer.Timer();
-            updateTimer.start(method(:updateActivityView), 1000, true);
+            _startTimer();
         } 
 
         return true;
     }
 
-    function updateActivityView() as Void {
+    function _startTimer() {
+        inProgress = true;
+        startTime = Time.now();
+        updateTimer = new Timer.Timer();
+        updateTimer.start(method(:_updateActivityView), 1000, true);
+    }
+
+    function _updateActivityView() as Void {
         var elapsed = Time.now().subtract(startTime);
 
         activityView.updateTimer(elapsed.value());

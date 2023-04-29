@@ -10,7 +10,7 @@ import Toybox.Timer;
 class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate{
     [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc"; @line = 6; ]
     <init> {
-[ "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc" 40 16 ]
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc" 45 16 ]
         %tmp.1 = self;
         %tmp.2 = getv function %tmp.1 :getApp;
         %tmp.3 = invoke %tmp.1 %tmp.2();
@@ -51,52 +51,61 @@ D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_12_33_start:
         ret %tmp.15;
 D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_12_33_stop:
     }
-    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc"; @line = 20; ]
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc"; @line = 21; ]
     function onSelect() as Boolean {
-D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_20_35_start:
-[ "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc" 21 8 ]
-D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_21_8_if_stmt:
+D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_21_35_start:
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc" 22 8 ]
+D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_22_8_if_stmt:
         %tmp.2 = getv ? :inProgress;
         %tmp.3 = not %tmp.2;
-        bf %tmp.3 @D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_21_8_if_end;
-D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_21_8_if_true:
-D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_21_25_start:
-[ "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc" 22 12 ]
-        %tmp.4 = true;
-        putv self :inProgress %tmp.4;
+        bf %tmp.3 @D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_22_8_if_end;
+D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_22_8_if_true:
+D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_22_25_start:
 [ "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc" 23 12 ]
-        %tmp.5 = getm $.Toybox.Time;
-        %tmp.6 = getv function %tmp.5 :now;
-        %tmp.7 = invoke %tmp.5 %tmp.6();
-        putv self :startTime %tmp.7;
-[ "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc" 24 12 ]
-        %tmp.10 = getm $.Toybox.Timer;
-        %tmp.11 = getv function ? %tmp.10 :Timer;
-        %tmp.8 = newc %tmp.11 ();
-        putv self :updateTimer %tmp.8;
-[ "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc" 25 12 ]
-        %tmp.13 = getv ? :updateTimer;
-        %tmp.14 = getv function %tmp.13 :start;
-        %tmp.15 = self;
-        %tmp.16 = getv function %tmp.15 :method;
-        %tmp.18 = const :updateActivityView;
-        %tmp.19 = invoke %tmp.15 %tmp.16(%tmp.18);
-        %tmp.20 = 1000;
-        %tmp.21 = true;
-        invoke %tmp.13 %tmp.14(%tmp.19, %tmp.20, %tmp.21);
-D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_21_25_stop:
-        goto @D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_21_8_if_end;
-D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_21_8_if_end:
-[ "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc" 28 8 ]
-        %tmp.22 = true;
-        ret %tmp.22;
-D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_20_35_stop:
+        %tmp.4 = self;
+        %tmp.5 = getv function %tmp.4 :_startTimer;
+        invoke %tmp.4 %tmp.5();
+D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_22_25_stop:
+        goto @D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_22_8_if_end;
+D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_22_8_if_end:
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc" 26 8 ]
+        %tmp.6 = true;
+        ret %tmp.6;
+D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_21_35_stop:
     }
-    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc"; @line = 31; ]
-    function updateActivityView() as Void {
-D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_31_42_start:
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc"; @line = 29; ]
+    function _startTimer() {
+D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_29_27_start:
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc" 30 8 ]
+        %tmp.1 = true;
+        putv self :inProgress %tmp.1;
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc" 31 8 ]
+        %tmp.2 = getm $.Toybox.Time;
+        %tmp.3 = getv function %tmp.2 :now;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        putv self :startTime %tmp.4;
 [ "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc" 32 8 ]
-        [ "D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_31_42_start" "D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_31_42_stop" ]
+        %tmp.7 = getm $.Toybox.Timer;
+        %tmp.8 = getv function ? %tmp.7 :Timer;
+        %tmp.5 = newc %tmp.8 ();
+        putv self :updateTimer %tmp.5;
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc" 33 8 ]
+        %tmp.10 = getv ? :updateTimer;
+        %tmp.11 = getv function %tmp.10 :start;
+        %tmp.12 = self;
+        %tmp.13 = getv function %tmp.12 :method;
+        %tmp.15 = const :_updateActivityView;
+        %tmp.16 = invoke %tmp.12 %tmp.13(%tmp.15);
+        %tmp.17 = 1000;
+        %tmp.18 = true;
+        invoke %tmp.10 %tmp.11(%tmp.16, %tmp.17, %tmp.18);
+D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_29_27_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc"; @line = 36; ]
+    function _updateActivityView() as Void {
+D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_36_43_start:
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc" 37 8 ]
+        [ "D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_36_43_start" "D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_36_43_stop" ]
         %elapsed.1 = local;
         %tmp.1 = getm $.Toybox.Time;
         %tmp.2 = getv function %tmp.1 :now;
@@ -105,25 +114,25 @@ D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_31_42_start:
         %tmp.6 = getv ? :startTime;
         %tmp.7 = invoke %tmp.3 %tmp.4(%tmp.6);
         lputv %elapsed.1 %tmp.7;
-[ "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc" 34 8 ]
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc" 39 8 ]
         %tmp.9 = getv ? :activityView;
         %tmp.10 = getv function %tmp.9 :updateTimer;
         %tmp.11 = lgetv %elapsed.1;
         %tmp.12 = getv function %tmp.11 :value;
         %tmp.13 = invoke %tmp.11 %tmp.12();
         invoke %tmp.9 %tmp.10(%tmp.13);
-D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_31_42_stop:
+D_src_BrekiTrekker_source_BrekiTrekkerDelegate_mc_36_43_stop:
     }
-    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc"; @line = 37; @position = 16; ]
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc"; @line = 42; @position = 16; ]
     private
     var inProgress = false;
-    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc"; @line = 38; @position = 16; ]
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc"; @line = 43; @position = 16; ]
     private
     var startTime;
-    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc"; @line = 39; @position = 16; ]
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc"; @line = 44; @position = 16; ]
     private
     var updateTimer;
-    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc"; @line = 40; @position = 16; ]
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerDelegate.mc"; @line = 45; @position = 16; ]
     private
     var activityView;
 }
