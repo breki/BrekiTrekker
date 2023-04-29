@@ -31,6 +31,8 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
         startTime = Time.now();
         updateTimer = new Timer.Timer();
         updateTimer.start(method(:_updateActivityView), 1000, true);
+        
+        _updateActivityView();
     }
 
     function _updateActivityView() as Void {
