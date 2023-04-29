@@ -1,6 +1,7 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
 import Toybox.Lang;
+import Toybox.Time;
 
 class BrekiTrekkerView extends WatchUi.View {
 
@@ -14,7 +15,8 @@ class BrekiTrekkerView extends WatchUi.View {
 
         timerElement = findDrawableById("timer");
 
-        updateTimer(5);
+        var activityRunning = false;
+        updateView(activityRunning, new Duration(0));
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -35,25 +37,20 @@ class BrekiTrekkerView extends WatchUi.View {
     function onHide() as Void {
     }
 
-    function updateTimer(time as Number) as Void {
-        var minutes = Math.floor(time / 60);
-        var seconds = time % 60;
+    function updateView(
+        activityRunning as Boolean, activityDuration as Duration) as Void {
+        var activityDurationInSeconds = activityDuration.value();
+        var minutes = Math.floor(activityDurationInSeconds / 60);
+        var seconds = activityDurationInSeconds % 60;
 
         // display time in MM:SS format
-        var timeStr = _zeroPadded(minutes) + ":" + _zeroPadded(seconds);
+        var timeStr = Lang.format(
+            "$1$:$2$", [minutes.format("%02d"), seconds.format("%02d")]);
 
         timerElement.setText(timeStr);
 
         // Request a call to the onUpdate() method for the current View
         WatchUi.requestUpdate();
-    }
-
-    function _zeroPadded(num as Number) as String {
-        if (num < 10) {
-            return "0" + num.toString();
-        } else {
-            return num.toString();
-        }
     }
 
     private var timerElement;

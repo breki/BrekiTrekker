@@ -29,22 +29,23 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
     function _startTimer() {
         inProgress = true;
         startTime = Time.now();
-        
-        updateTimer = new Timer.Timer();
+
+        activityTimer = new Timer.Timer();
         var repeat = true; // the Timer will repeat until stop() is called
-        updateTimer.start(method(:_updateActivityView), 1000, repeat);
+        activityTimer.start(method(:_updateActivityView), 1000, repeat);
         
         _updateActivityView();
     }
 
     function _updateActivityView() as Void {
-        var elapsed = Time.now().subtract(startTime);
+        var activityDuration = Time.now().subtract(startTime);
 
-        activityView.updateTimer(elapsed.value());
+        var activityRunning = true;
+        activityView.updateView(activityRunning, activityDuration);
     }
 
     private var inProgress = false;
     private var startTime;
-    private var updateTimer;
+    private var activityTimer;
     private var activityView = getApp().getActivityView();
 }

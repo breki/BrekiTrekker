@@ -2,6 +2,7 @@ import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
 
+// The handler for application lifecycle events.
 class BrekiTrekkerApp extends Application.AppBase {
 
     function initialize() {
@@ -12,7 +13,8 @@ class BrekiTrekkerApp extends Application.AppBase {
     function onStart(state as Dictionary?) as Void {
     }
 
-    // onStop() is called when your application is exiting
+    // onStop() is called when your application is exiting.
+    // This gives your application the option to save state before termination.
     function onStop(state as Dictionary?) as Void {
     }
 
