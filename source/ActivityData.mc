@@ -4,32 +4,40 @@ import Toybox.Time;
 class AppState { 
     enum {
         INITIAL,
-        STARTED,
+        RUNNING,
         BACK_BUTTON_DISPLAY
     }
 }
 
 class ActivityData {
-    function startActivity() {
-        state = AppState.STARTED;
-        startTime = Time.now();
-    }
-
-    function onBackButton() {
+    function onSelectButton() {
         switch (state) {
-            case AppState.STARTED: {
-                state = AppState.BACK_BUTTON_DISPLAY;
-                break;
-            }
-            case AppState.BACK_BUTTON_DISPLAY: {
-                state = AppState.STARTED;
+            case AppState.INITIAL: {
+                startActivity();
                 break;
             }
         }
     }
 
-    function activityDuration() as Duration or Null {
+    function onBackButton() {
+        switch (state) {
+            case AppState.RUNNING: {
+                state = AppState.BACK_BUTTON_DISPLAY;
+                break;
+            }
+            case AppState.BACK_BUTTON_DISPLAY: {
+                state = AppState.RUNNING;
+                break;
+            }
+        }
+    }
 
+    function startActivity() {
+        state = AppState.RUNNING;
+        startTime = Time.now();
+    }
+
+    function activityDuration() as Duration or Null {
         if (startTime != null) {
             return Time.now().subtract(startTime);
         }

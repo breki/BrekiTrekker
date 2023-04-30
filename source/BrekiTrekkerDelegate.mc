@@ -21,12 +21,19 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
     function onSelect() as Boolean {
         System.println("onSelect");
 
-        switch (activityData.state) {
-            case AppState.INITIAL: {
-                _startTimer();
-                break;
-            }
+        var stateBefore = activityData.state;
+
+        activityData.onSelectButton();
+
+        var stateAfter = activityData.state;
+
+        if (stateBefore == AppState.INITIAL && stateAfter == AppState.RUNNING) {
+            activityTimer = new Timer.Timer();
+            var repeat = true; // the Timer will repeat until stop() is called
+            activityTimer.start(method(:_updateActivityView), 1000, repeat);
         }
+        
+        _updateActivityView();
 
         return true;
     }
@@ -34,16 +41,10 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
     function onBack() as Boolean {
         System.println("onBack");
         activityData.onBackButton();
-        return true;
-    }
 
-    function _startTimer() {
-        activityData.startActivity();
-        activityTimer = new Timer.Timer();
-        var repeat = true; // the Timer will repeat until stop() is called
-        activityTimer.start(method(:_updateActivityView), 1000, repeat);
-        
         _updateActivityView();
+
+        return true;
     }
 
     function _updateActivityView() as Void {

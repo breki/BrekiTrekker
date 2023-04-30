@@ -18,7 +18,7 @@ class ActivityDisplay extends WatchUi.Drawable {
                 _drawStartupScreen(dc);
                 break;
             }
-            case AppState.STARTED:
+            case AppState.RUNNING:
             case AppState.BACK_BUTTON_DISPLAY: {
                 _drawActivityScreen(dc);
                 break;
