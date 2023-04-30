@@ -1,1 +1,11 @@
 - handle stopping of the activity
+- what to do with the START button once the activity has started?
+- what to do with up, down buttons?
+- pick up and display the HRM
+- display altitude and difference
+- display time
+- display distance
+- display battery level
+- display temperature
+- how to switch activity type?
+- how to upload the activity?

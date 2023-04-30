@@ -19,10 +19,21 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
 
     // on the SELECT button press
     function onSelect() as Boolean {
-        if (!activityData.activityRunning) {
-            _startTimer();
-        } 
+        System.println("onSelect");
 
+        switch (activityData.state) {
+            case AppState.INITIAL: {
+                _startTimer();
+                break;
+            }
+        }
+
+        return true;
+    }
+
+    function onBack() as Boolean {
+        System.println("onBack");
+        activityData.onBackButton();
         return true;
     }
 
