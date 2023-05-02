@@ -19,6 +19,7 @@ class ActivityDisplay extends WatchUi.Drawable {
                 break;
             }
             case AppState.RUNNING:
+            case AppState.MENU_DISPLAY:
             case AppState.BACK_BUTTON_DISPLAY: {
                 _drawActivityScreen(dc);
                 break;
@@ -45,8 +46,8 @@ class ActivityDisplay extends WatchUi.Drawable {
         var minutes = Math.floor(activityDurationInSeconds / 60);
         var seconds = activityDurationInSeconds % 60;
 
-        var x = screenSize / 2;
-        var y = screenSize / 2;
+        var centerX = screenSize / 2;
+        var centerY = screenSize / 2;
 
         // display time in MM:SS format
         var timerText = Lang.format(
@@ -56,16 +57,48 @@ class ActivityDisplay extends WatchUi.Drawable {
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
 
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(x, y, Graphics.FONT_NUMBER_THAI_HOT, timerText, hvCenter);
+        dc.drawText(centerX, centerY, 
+        Graphics.FONT_NUMBER_THAI_HOT, timerText, hvCenter);
 
-        if (_activityData.state == AppState.BACK_BUTTON_DISPLAY) {
-            var hCenter = Graphics.TEXT_JUSTIFY_CENTER;
+        switch (_activityData.state) {
+            case AppState.MENU_DISPLAY: { 
+                _drawMenu(dc, centerX);
+                break;
+            }
 
-            dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(
-                x, y + 30, Graphics.FONT_TINY, 
-                "press START\nto record/stop", hCenter);
+            case AppState.BACK_BUTTON_DISPLAY: {
+                dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+                dc.drawText(
+                    centerX, centerY + 30, Graphics.FONT_TINY, 
+                    "press START\nto record/stop", Graphics.TEXT_JUSTIFY_CENTER);
+
+                break;
+            }
         }
+    }
+
+    function _drawMenu(dc as Dc, centerX as Number) as Void {
+        if (_activityData.selectedMenuItem == MenuItem.RECORD_STOP) {
+            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_ORANGE);
+        }
+        else {
+            dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_BLACK);
+        }
+
+        dc.drawText(
+            centerX, 30, Graphics.FONT_TINY, 
+            "      RECORD & STOP      ", Graphics.TEXT_JUSTIFY_CENTER);
+
+        if (_activityData.selectedMenuItem == MenuItem.DISCARD) {
+            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_ORANGE);
+        }
+        else {
+            dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_BLACK);
+        }
+
+        dc.drawText(
+            centerX, 60, Graphics.FONT_TINY, 
+            "               DISCARD               ", Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     // todo: can we find the display size constant?

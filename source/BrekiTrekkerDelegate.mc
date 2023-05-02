@@ -49,6 +49,22 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
 
     function onNextPage() as Boolean {
         System.println("onNextPage");
+
+        var refreshDisplay = activityData.onNextPageButton();
+        if (refreshDisplay) {
+            _updateActivityView();
+        }
+
+        return true;
+    }
+
+    function onPreviousPage() as Boolean {
+        System.println("onPreviousPage");
+        var refreshDisplay = activityData.onPreviousPageButton();
+        if (refreshDisplay) {
+            _updateActivityView();
+        }
+
         return true;
     }
 

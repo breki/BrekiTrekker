@@ -1,3 +1,7 @@
+- implement menu actions
+    - record & stop
+    - discard (add confirmation dialog)
+
 - use key handlers to handle the buttons so we can implement short/long presses
 - handle stopping of the activity
 - what to do with the START button once the activity has started?
