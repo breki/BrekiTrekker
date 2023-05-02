@@ -52,17 +52,19 @@ class ActivityDisplay extends WatchUi.Drawable {
         var timerText = Lang.format(
             "$1$:$2$", [minutes.format("%02d"), seconds.format("%02d")]);
 
-        var justification = 
+        var hvCenter = 
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
 
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(x, y, Graphics.FONT_NUMBER_THAI_HOT, timerText, justification);
+        dc.drawText(x, y, Graphics.FONT_NUMBER_THAI_HOT, timerText, hvCenter);
 
         if (_activityData.state == AppState.BACK_BUTTON_DISPLAY) {
-            dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
+            var hCenter = Graphics.TEXT_JUSTIFY_CENTER;
+
+            dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
             dc.drawText(
-                x, y, Graphics.FONT_MEDIUM, 
-                "press START\nto stop/record", justification);
+                x, y + 30, Graphics.FONT_TINY, 
+                "press START\nto record/stop", hCenter);
         }
     }
 
