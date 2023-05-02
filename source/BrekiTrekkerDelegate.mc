@@ -2,11 +2,15 @@ import Toybox.Lang;
 import Toybox.WatchUi;
 import Toybox.Time;
 import Toybox.Timer;
+import Toybox.Position;
 
 class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
 
     function initialize() {
         BehaviorDelegate.initialize();
+
+        Position.enableLocationEvents(
+            Position.LOCATION_CONTINUOUS, method(:onPosition));
     }
 
     function onMenu() as Boolean {
@@ -15,6 +19,10 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
             new BrekiTrekkerMenuDelegate(), 
             WatchUi.SLIDE_UP);
         return true;
+    }
+
+    function onPosition(info as Info) as Void {
+        System.println("onPosition");
     }
 
     // on the SELECT button press
