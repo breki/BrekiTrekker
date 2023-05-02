@@ -1,10 +1,9 @@
-- implement menu actions
-    - record & stop
-    - discard (add confirmation dialog)
+- connect to sensors
 
+- add support for pausing
+- handle onStop() to persist (https://developer.garmin.com/connect-iq/core-topics/application-and-system-modules/)
 - use key handlers to handle the buttons so we can implement short/long presses
 - handle stopping of the activity
-- what to do with the START button once the activity has started?
 - what to do with up, down buttons?
 - pick up and display the HRM
 - display altitude and difference

@@ -24,6 +24,15 @@ class ActivityDisplay extends WatchUi.Drawable {
                 _drawActivityScreen(dc);
                 break;
             }
+            case AppState.SAVING:
+                _drawSavingScreen(dc);
+                break;
+            case AppState.CONFIRM_DISCARD:
+                _drawConfirmDiscardScreen(dc);
+                break;
+            case AppState.DISCARDING:
+                _drawDiscardingScreen(dc);
+                break;
         }
     }
 
@@ -46,9 +55,6 @@ class ActivityDisplay extends WatchUi.Drawable {
         var minutes = Math.floor(activityDurationInSeconds / 60);
         var seconds = activityDurationInSeconds % 60;
 
-        var centerX = screenSize / 2;
-        var centerY = screenSize / 2;
-
         // display time in MM:SS format
         var timerText = Lang.format(
             "$1$:$2$", [minutes.format("%02d"), seconds.format("%02d")]);
@@ -58,11 +64,11 @@ class ActivityDisplay extends WatchUi.Drawable {
 
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(centerX, centerY, 
-        Graphics.FONT_NUMBER_THAI_HOT, timerText, hvCenter);
+            Graphics.FONT_NUMBER_THAI_HOT, timerText, hvCenter);
 
         switch (_activityData.state) {
             case AppState.MENU_DISPLAY: { 
-                _drawMenu(dc, centerX);
+                _drawMenu(dc);
                 break;
             }
 
@@ -77,7 +83,46 @@ class ActivityDisplay extends WatchUi.Drawable {
         }
     }
 
-    function _drawMenu(dc as Dc, centerX as Number) as Void {
+    function _drawSavingScreen(dc as Dc) as Void {
+        dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(
+            centerX, centerY, Graphics.FONT_MEDIUM, 
+            "ACTIVITY SAVED", 
+            Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+
+        dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(
+            centerX, centerY + 35, Graphics.FONT_TINY, 
+            "press any key\nto exit", Graphics.TEXT_JUSTIFY_CENTER);
+    }
+
+    function _drawConfirmDiscardScreen(dc as Dc) as Void {
+        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(
+            centerX, centerY, Graphics.FONT_MEDIUM, 
+            "Do you really\nwant to discard?\n", 
+            Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+
+        dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(
+            centerX, centerY + 35, Graphics.FONT_TINY, 
+            "press BACK\nto return", Graphics.TEXT_JUSTIFY_CENTER);
+    }
+
+    function _drawDiscardingScreen(dc as Dc) as Void {
+        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(
+            centerX, centerY, Graphics.FONT_MEDIUM, 
+            "ACTIVITY\nDISCARDED", 
+            Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+
+        dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(
+            centerX, centerY + 35, Graphics.FONT_TINY, 
+            "press any key\nto exit", Graphics.TEXT_JUSTIFY_CENTER);
+    }
+
+    function _drawMenu(dc as Dc) as Void {
         if (_activityData.selectedMenuItem == MenuItem.RECORD_STOP) {
             dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_ORANGE);
         }
@@ -87,7 +132,7 @@ class ActivityDisplay extends WatchUi.Drawable {
 
         dc.drawText(
             centerX, 30, Graphics.FONT_TINY, 
-            "      RECORD & STOP      ", Graphics.TEXT_JUSTIFY_CENTER);
+            "         SAVE & STOP         ", Graphics.TEXT_JUSTIFY_CENTER);
 
         if (_activityData.selectedMenuItem == MenuItem.DISCARD) {
             dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_ORANGE);
@@ -103,5 +148,7 @@ class ActivityDisplay extends WatchUi.Drawable {
 
     // todo: can we find the display size constant?
     private var screenSize = 240;
+    private var centerX = screenSize / 2;
+    private var centerY = screenSize / 2;
     private var _activityData;
 }
