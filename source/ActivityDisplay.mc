@@ -2,10 +2,19 @@ import Toybox.WatchUi;
 import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.Time;
+import Toybox.Time.Gregorian;
+import Toybox.System;
 
 class ActivityDisplay extends WatchUi.Drawable {
     function initialize(params as Object) {
         Drawable.initialize(params);
+
+        var device = System.getDeviceSettings();
+ 
+        screenWidth = device.screenWidth;
+        screenHeight = device.screenHeight;
+        centerX = screenWidth / 2;
+        centerY = screenHeight / 2;
     }
 
     function updateData(activityData as ActivityData) {
@@ -43,28 +52,16 @@ class ActivityDisplay extends WatchUi.Drawable {
         var justification = 
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
 
-        var x = screenSize / 2;
-        var y = screenSize / 2;
-
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(x, y, font, timerText, justification);
+        dc.drawText(centerX, centerY, font, timerText, justification);
     }
 
     function _drawActivityScreen(dc as Dc) as Void {
-        var activityDurationInSeconds = _activityData.activityDuration().value();
-        var minutes = Math.floor(activityDurationInSeconds / 60);
-        var seconds = activityDurationInSeconds % 60;
-
-        // display time in MM:SS format
-        var timerText = Lang.format(
-            "$1$:$2$", [minutes.format("%02d"), seconds.format("%02d")]);
-
-        var hvCenter = 
-            Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
-
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX, centerY, 
-            Graphics.FONT_NUMBER_THAI_HOT, timerText, hvCenter);
+        _drawTime(dc);
+        _drawTimer(dc);
+        _drawHeartRate(dc);
+        _drawAltitude(dc);
+        _drawBatteryLevel(dc);
 
         switch (_activityData.state) {
             case AppState.MENU_DISPLAY: { 
@@ -80,6 +77,92 @@ class ActivityDisplay extends WatchUi.Drawable {
 
                 break;
             }
+        }
+    }
+
+    function _drawTime(dc as Dc) as Void {
+        var now = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
+
+        var timeText = Lang.format(
+            "$1$:$2$", [now.hour.format("%02d"), now.min.format("%02d")]);
+
+        var hvCenter = 
+            Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
+
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(centerX, 10, Graphics.FONT_TINY, timeText, hvCenter);
+    }
+
+    function _drawTimer(dc as Dc) as Void {
+        var activityDurationInSeconds = _activityData.activityDuration().value();
+        var minutes = Math.floor(activityDurationInSeconds / 60);
+        var seconds = activityDurationInSeconds % 60;
+
+        var timerText = Lang.format(
+            "$1$:$2$", [minutes.format("%02d"), seconds.format("%02d")]);
+
+        var hvCenter = 
+            Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
+
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(centerX, centerY + 100, 
+            Graphics.FONT_XTINY, timerText, hvCenter);
+    }
+
+    function _drawHeartRate(dc as Dc) as Void {
+        var heartRate = _activityData.heartRate;
+
+        var color;
+        if (heartRate == null) { color = Graphics.COLOR_GREEN; }
+        else if (heartRate >= 170) { color = Graphics.COLOR_DK_RED; }
+        else if (heartRate >= 150) { color = Graphics.COLOR_RED; }
+        else if (heartRate >= 130)  { color = Graphics.COLOR_ORANGE; }
+        else if (heartRate >= 110)  { color = Graphics.COLOR_YELLOW; }
+        else { color = Graphics.COLOR_GREEN; }
+
+        dc.setColor(color, Graphics.COLOR_TRANSPARENT);
+
+        var xPos = 50;
+        var heartRateText;
+        
+        if (heartRate != null) { heartRateText = Lang.format("$1$", [heartRate]); }
+        else { heartRateText = "---"; }
+
+        dc.drawText(centerX + xPos, centerY, 
+            Graphics.FONT_NUMBER_THAI_HOT, heartRateText, 
+            Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+
+        dc.drawText(centerX + xPos + 5, centerY + 20, 
+            Graphics.FONT_XTINY, "bpm", 
+            Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+    }
+
+    function _drawAltitude(dc as Dc) as Void {
+        var altText = Lang.format("$1$m", 
+            [_activityData.currentAltitude.format("%d")]);
+        var ascendText = Lang.format("+$1$m", 
+            [_activityData.ascent().format("%d")]);
+
+        var xPos = 70;
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(xPos, centerY, Graphics.FONT_XTINY, altText, 
+            Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.setColor(Graphics.COLOR_PINK, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(xPos, centerY - 20, Graphics.FONT_XTINY, ascendText, 
+            Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+    }
+
+    function _drawBatteryLevel(dc as Dc) as Void {
+        if (_activityData.batteryLevel != null) {
+            dc.setPenWidth(7);
+            dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+            dc.drawArc(centerX, centerY, centerX-3, 
+                Graphics.ARC_COUNTER_CLOCKWISE, 240, 240 + 60);
+            dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+
+            var indicatorWidth = 60 * _activityData.batteryLevel / 100;
+            dc.drawArc(centerX, centerY, centerX-3, 
+                Graphics.ARC_COUNTER_CLOCKWISE, 240, 240 + indicatorWidth);
         }
     }
 
@@ -146,9 +229,9 @@ class ActivityDisplay extends WatchUi.Drawable {
             "               DISCARD               ", Graphics.TEXT_JUSTIFY_CENTER);
     }
 
-    // todo: can we find the display size constant?
-    private var screenSize = 240;
-    private var centerX = screenSize / 2;
-    private var centerY = screenSize / 2;
+    private var screenWidth;
+    private var screenHeight;
+    private var centerX;
+    private var centerY;
     private var _activityData;
 }

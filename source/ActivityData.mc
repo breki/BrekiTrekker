@@ -157,12 +157,45 @@ class ActivityData {
         }
     }
 
+    function setHeartRate(value as Number) {
+        heartRate = value;
+    }
+
+    function setAltitude(value as Number) {
+        currentAltitude = value;
+        if (minAltitude == null || currentAltitude < minAltitude) {
+            minAltitude = currentAltitude;
+        }
+        if (maxAltitude == null || currentAltitude > maxAltitude) {
+            maxAltitude = currentAltitude;
+        }
+    }
+
+    function ascent() as Number or Null {
+        if (minAltitude != null && maxAltitude != null) {
+            return maxAltitude - minAltitude;
+        }
+        else {
+            return null;
+        }
+    }
+
+    function setTemperature(value as Number) {
+        temperature = value;
+    }
+
     static function initial() as ActivityData {
         return new ActivityData();
     }
 
     var state = AppState.INITIAL;
     var startTime as Moment or Null;
+    var heartRate as Number or Null;
+    var currentAltitude as Number or Null;
+    var minAltitude as Number or Null;
+    var maxAltitude as Number or Null;
+    var temperature as Number or Null;
+    var batteryLevel as Number or Null;
     var activitySession as Session or Null;
     var selectedMenuItem = MenuItem.NONE;
 }

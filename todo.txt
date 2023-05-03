@@ -1,17 +1,10 @@
-- connect to sensors
-
 - how to calculate the distance traveled, elevation etc?
 
 - add support for pausing
 - handle onStop() to persist (https://developer.garmin.com/connect-iq/core-topics/application-and-system-modules/)
 - use key handlers to handle the buttons so we can implement short/long presses
-- handle stopping of the activity
 - what to do with up, down buttons?
-- pick up and display the HRM
-- display altitude and difference
-- display time
-- display distance
-- display battery level
 - display temperature
+- display distance
 - how to switch activity type?
 - how to upload the activity?

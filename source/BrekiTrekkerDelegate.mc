@@ -1,8 +1,10 @@
 import Toybox.Lang;
-import Toybox.WatchUi;
+import Toybox.Position;
+import Toybox.Sensor;
+import Toybox.System;
 import Toybox.Time;
 import Toybox.Timer;
-import Toybox.Position;
+import Toybox.WatchUi;
 
 class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
 
@@ -11,6 +13,10 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
 
         Position.enableLocationEvents(
             Position.LOCATION_CONTINUOUS, method(:onPosition));
+
+        Sensor.setEnabledSensors(
+            [Sensor.SENSOR_HEARTRATE, Sensor.SENSOR_TEMPERATURE]);
+        Sensor.enableSensorEvents(method(:onSensor));
     }
 
     function onMenu() as Boolean {
@@ -21,8 +27,14 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
         return true;
     }
 
-    function onPosition(info as Info) as Void {
+    function onPosition(info as Position.Info) as Void {
         System.println("onPosition");
+    }
+
+    function onSensor(info as Sensor.Info) as Void {
+        activityData.setHeartRate(info.heartRate);
+        activityData.setAltitude(info.altitude);
+        activityData.setTemperature(info.temperature);
     }
 
     // on the SELECT button press
@@ -77,6 +89,9 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function _updateActivityView() as Void {
+        var systemStats = System.getSystemStats();
+        activityData.batteryLevel = systemStats.battery;
+
         activityView.updateView(activityData);
     }
 
