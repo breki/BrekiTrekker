@@ -1,10 +1,16 @@
-- how to calculate the distance traveled, elevation etc?
+- how to upload the activity?
+    - do we need to add fields?
+
+- display distance
+    - how to calculate it?
+
+- display the next sunset/sunrise time
+
+- show info about when the battery will run out
 
 - add support for pausing
-- handle onStop() to persist (https://developer.garmin.com/connect-iq/core-topics/application-and-system-modules/)
+- handle onStop() to persist application data 
+    (https://developer.garmin.com/connect-iq/core-topics/application-and-system-modules/)
 - use key handlers to handle the buttons so we can implement short/long presses
 - what to do with up, down buttons?
-- display temperature
-- display distance
 - how to switch activity type?
-- how to upload the activity?

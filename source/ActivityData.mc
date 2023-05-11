@@ -22,6 +22,34 @@ class MenuItem {
     }
 }
 
+class ActivityParameter {
+    function setValue(value as Number or Null) {
+        currentValue = value;
+
+        if (currentValue != null) {
+            if (minValue == null || currentValue < minValue) {
+                minValue = currentValue;
+            }
+            if (maxValue == null || currentValue > maxValue) {
+                maxValue = currentValue;
+            }
+        }
+    }
+
+    function minMaxDiff() as Number or Null {
+        if (minValue != null && maxValue != null) {
+            return maxValue - minValue;
+        }
+        else {
+            return null;
+        }
+    }
+
+    var currentValue as Number or Null;
+    var minValue as Number or Null;
+    var maxValue as Number or Null;
+}
+
 class ActivityData {
     function onSelectButton() {
         switch (state) {
@@ -139,7 +167,7 @@ class ActivityData {
 
     function startActivity() {
         state = AppState.RUNNING;
-        startTime = Time.now();
+        startTime = Time.now(); //.add(new Duration(-6444));
         activitySession = ActivityRecording.createSession({
             :name => "Walking",
             :sport => Activity.SPORT_WALKING,
@@ -157,31 +185,20 @@ class ActivityData {
         }
     }
 
-    function setHeartRate(value as Number) {
-        heartRate = value;
+    function setHeartRate(value as Number or Null) {
+        heartRate.setValue(value);
     }
 
-    function setAltitude(value as Number) {
-        currentAltitude = value;
-        if (minAltitude == null || currentAltitude < minAltitude) {
-            minAltitude = currentAltitude;
-        }
-        if (maxAltitude == null || currentAltitude > maxAltitude) {
-            maxAltitude = currentAltitude;
-        }
+    function setAltitude(value as Number or Null) {
+        altitude.setValue(value);
     }
 
     function ascent() as Number or Null {
-        if (minAltitude != null && maxAltitude != null) {
-            return maxAltitude - minAltitude;
-        }
-        else {
-            return null;
-        }
+        return altitude.minMaxDiff();
     }
 
-    function setTemperature(value as Number) {
-        temperature = value;
+    function setTemperature(value as Number or Null) {
+        temperature.setValue(value);
     }
 
     static function initial() as ActivityData {
@@ -190,11 +207,9 @@ class ActivityData {
 
     var state = AppState.INITIAL;
     var startTime as Moment or Null;
-    var heartRate as Number or Null;
-    var currentAltitude as Number or Null;
-    var minAltitude as Number or Null;
-    var maxAltitude as Number or Null;
-    var temperature as Number or Null;
+    var heartRate = new ActivityParameter();
+    var altitude = new ActivityParameter();
+    var temperature = new ActivityParameter();
     var batteryLevel as Number or Null;
     var activitySession as Session or Null;
     var selectedMenuItem = MenuItem.NONE;

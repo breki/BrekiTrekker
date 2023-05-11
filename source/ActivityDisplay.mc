@@ -61,6 +61,7 @@ class ActivityDisplay extends WatchUi.Drawable {
         _drawTimer(dc);
         _drawHeartRate(dc);
         _drawAltitude(dc);
+        _drawTemperature(dc);
         _drawBatteryLevel(dc);
 
         switch (_activityData.state) {
@@ -95,11 +96,21 @@ class ActivityDisplay extends WatchUi.Drawable {
 
     function _drawTimer(dc as Dc) as Void {
         var activityDurationInSeconds = _activityData.activityDuration().value();
-        var minutes = Math.floor(activityDurationInSeconds / 60);
+        var hours = Math.floor(activityDurationInSeconds / 3600);
+        var minutes = Math.floor(activityDurationInSeconds / 60 % 60);
         var seconds = activityDurationInSeconds % 60;
 
-        var timerText = Lang.format(
-            "$1$:$2$", [minutes.format("%02d"), seconds.format("%02d")]);
+        var timerText;
+        
+        if (hours == 0) {
+            timerText = Lang.format(
+                "$1$:$2$", [minutes.format("%02d"), seconds.format("%02d")]);
+        }
+        else {
+            timerText = Lang.format(
+                "$1$:$2$:$3$", 
+                [hours, minutes.format("%02d"), seconds.format("%02d")]);
+        }
 
         var hvCenter = 
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
@@ -110,7 +121,7 @@ class ActivityDisplay extends WatchUi.Drawable {
     }
 
     function _drawHeartRate(dc as Dc) as Void {
-        var heartRate = _activityData.heartRate;
+        var heartRate = _activityData.heartRate.currentValue;
 
         var color;
         if (heartRate == null) { color = Graphics.COLOR_GREEN; }
@@ -135,11 +146,21 @@ class ActivityDisplay extends WatchUi.Drawable {
         dc.drawText(centerX + xPos + 5, centerY + 20, 
             Graphics.FONT_XTINY, "bpm", 
             Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(centerX + xPos + 40, centerY - 20, 
+            Graphics.FONT_XTINY, 
+            Lang.format("$1$", [_activityData.heartRate.maxValue]), 
+            Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);        
+        dc.drawText(centerX + xPos + 40, centerY, 
+            Graphics.FONT_XTINY, 
+            Lang.format("$1$", [_activityData.heartRate.minValue]), 
+            Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);        
     }
 
     function _drawAltitude(dc as Dc) as Void {
         var altText = Lang.format("$1$m", 
-            [_activityData.currentAltitude.format("%d")]);
+            [_activityData.altitude.currentValue.format("%d")]);
         var ascendText = Lang.format("+$1$m", 
             [_activityData.ascent().format("%d")]);
 
@@ -149,6 +170,16 @@ class ActivityDisplay extends WatchUi.Drawable {
             Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
         dc.setColor(Graphics.COLOR_PINK, Graphics.COLOR_TRANSPARENT);
         dc.drawText(xPos, centerY - 20, Graphics.FONT_XTINY, ascendText, 
+            Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+    }
+
+    function _drawTemperature(dc as Dc) as Void {
+        var temperatureText = Lang.format("$1$°C", 
+            [_activityData.temperature.currentValue.format("%.1f")]);
+
+        var xPos = 70;
+        dc.setColor(Graphics.COLOR_DK_GREEN, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(xPos, centerY + 20, Graphics.FONT_XTINY, temperatureText, 
             Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
