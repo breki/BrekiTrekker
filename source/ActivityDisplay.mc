@@ -148,14 +148,18 @@ class ActivityDisplay extends WatchUi.Drawable {
             Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX + xPos + 40, centerY - 20, 
-            Graphics.FONT_XTINY, 
-            Lang.format("$1$", [_activityData.heartRate.maxValue]), 
-            Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);        
-        dc.drawText(centerX + xPos + 40, centerY, 
-            Graphics.FONT_XTINY, 
-            Lang.format("$1$", [_activityData.heartRate.minValue]), 
-            Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);        
+        if (_activityData.heartRate.maxValue != null) {
+            dc.drawText(centerX + xPos + 40, centerY - 20, 
+                Graphics.FONT_XTINY, 
+                Lang.format("$1$", [_activityData.heartRate.maxValue]), 
+                Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);        
+        }
+        if (_activityData.heartRate.minValue != null) {
+            dc.drawText(centerX + xPos + 40, centerY, 
+                Graphics.FONT_XTINY, 
+                Lang.format("$1$", [_activityData.heartRate.minValue]), 
+                Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);        
+        }
     }
 
     function _drawAltitude(dc as Dc) as Void {
@@ -174,8 +178,15 @@ class ActivityDisplay extends WatchUi.Drawable {
     }
 
     function _drawTemperature(dc as Dc) as Void {
-        var temperatureText = Lang.format("$1$°C", 
-            [_activityData.temperature.currentValue.format("%.1f")]);
+
+        var temperatureText;
+        if (_activityData.temperature.currentValue != null) {
+            temperatureText = Lang.format("$1$°C", 
+                [_activityData.temperature.currentValue.format("%.1f")]);
+        }
+        else {
+            temperatureText = "---°C";
+        }
 
         var xPos = 70;
         dc.setColor(Graphics.COLOR_DK_GREEN, Graphics.COLOR_TRANSPARENT);

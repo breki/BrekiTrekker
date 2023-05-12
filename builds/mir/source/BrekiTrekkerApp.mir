@@ -1,0 +1,75 @@
+[ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc"; @line = 1; ]
+import Toybox.Application;
+[ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc"; @line = 3; ]
+import Toybox.WatchUi;
+[ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc"; @line = 6; ]
+class BrekiTrekkerApp extends Application.AppBase{
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc"; @line = 8; ]
+    function initialize() as Void {
+D_src_BrekiTrekker_source_BrekiTrekkerApp_mc_8_26_start:
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc" 9 8 ]
+        %tmp.2 = getv ? :AppBase;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+D_src_BrekiTrekker_source_BrekiTrekkerApp_mc_8_26_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc"; @line = 13; ]
+    function onStart(state as Dictionary or Null) as Void {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc"; @line = 18; ]
+    function onStop(state as Dictionary or Null) as Void {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc"; @line = 22; ]
+    function getInitialView() as Array<Views or InputDelegates> or Null {
+D_src_BrekiTrekker_source_BrekiTrekkerApp_mc_22_65_start:
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc" 23 8 ]
+        %tmp.4 = getv ? :BrekiTrekkerView;
+        %tmp.1 = newc %tmp.4 ();
+        putv self :activityView %tmp.1;
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc" 24 8 ]
+        %tmp.5 = newa Array<Views or InputDelegates> 2;
+        %tmp.7 = getv ? :activityView;
+        %tmp.8 = dup %tmp.5;
+        %tmp.9 = aputv %tmp.8 0 %tmp.7;
+        %tmp.13 = getv ? :BrekiTrekkerDelegate;
+        %tmp.10 = newc %tmp.13 ();
+        %tmp.14 = dup %tmp.9;
+        %tmp.15 = aputv %tmp.14 1 %tmp.10;
+        ret %tmp.15;
+D_src_BrekiTrekker_source_BrekiTrekkerApp_mc_22_65_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc"; @line = 28; ]
+    function getActivityView() as BrekiTrekkerView {
+D_src_BrekiTrekker_source_BrekiTrekkerApp_mc_28_51_start:
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc" 29 8 ]
+        %tmp.2 = getv ? :activityView;
+        ret %tmp.2;
+D_src_BrekiTrekker_source_BrekiTrekkerApp_mc_28_51_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc"; @line = 32; @position = 16; ]
+    private
+    var activityView;
+}
+[ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc"; @line = 35; ]
+function getApp() as BrekiTrekkerApp {
+D_src_BrekiTrekker_source_BrekiTrekkerApp_mc_35_37_start:
+[ "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc" 36 4 ]
+    %tmp.1 = getm $.Toybox.Application;
+    %tmp.2 = getv function %tmp.1 :getApp;
+    %tmp.3 = invoke %tmp.1 %tmp.2();
+    %tmp.4 = as %tmp.3 BrekiTrekkerApp;
+    ret %tmp.4;
+D_src_BrekiTrekker_source_BrekiTrekkerApp_mc_35_37_stop:
+}
+[ @file = "D:\src\BrekiTrekker\source\BrekiTrekkerApp.mc"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<manifest filename="D:\src\BrekiTrekker\manifest.xml"/>
+<pcToLineNum>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="1" lineNum="53" parent="globals/ActivityData" pc="268435460" symbol="&lt;init&gt;"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="1" lineNum="210" parent="globals/ActivityData" pc="268435460" symbol="&lt;init&gt;"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="1" lineNum="211" parent="globals/ActivityData" pc="268435494" symbol="&lt;init&gt;"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="1" lineNum="212" parent="globals/ActivityData" pc="268435528" symbol="&lt;init&gt;"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="2" lineNum="204" parent="globals/ActivityData" pc="268435563" symbol="initial"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="2" lineNum="205" parent="globals/ActivityData" pc="268435565" symbol="initial"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="3" lineNum="94" parent="globals/ActivityData" pc="268435588" symbol="onBackButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="3" lineNum="95" parent="globals/ActivityData" pc="268435590" symbol="onBackButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="3" lineNum="97" parent="globals/ActivityData" pc="268435721" symbol="onBackButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="3" lineNum="98" parent="globals/ActivityData" pc="268435734" symbol="onBackButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="3" lineNum="102" parent="globals/ActivityData" pc="268435737" symbol="onBackButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="3" lineNum="103" parent="globals/ActivityData" pc="268435750" symbol="onBackButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="3" lineNum="106" parent="globals/ActivityData" pc="268435753" symbol="onBackButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="3" lineNum="107" parent="globals/ActivityData" pc="268435766" symbol="onBackButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="3" lineNum="111" parent="globals/ActivityData" pc="268435769" symbol="onBackButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="4" lineNum="179" parent="globals/ActivityData" pc="268435789" symbol="activityDuration"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="4" lineNum="180" parent="globals/ActivityData" pc="268435791" symbol="activityDuration"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="4" lineNum="181" parent="globals/ActivityData" pc="268435804" symbol="activityDuration"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="4" lineNum="184" parent="globals/ActivityData" pc="268435840" symbol="activityDuration"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="5" lineNum="168" parent="globals/ActivityData" pc="268435843" symbol="startActivity"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="5" lineNum="169" parent="globals/ActivityData" pc="268435845" symbol="startActivity"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="5" lineNum="170" parent="globals/ActivityData" pc="268435858" symbol="startActivity"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="5" lineNum="171" parent="globals/ActivityData" pc="268435881" symbol="startActivity"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="5" lineNum="176" parent="globals/ActivityData" pc="268435936" symbol="startActivity"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="6" lineNum="142" parent="globals/ActivityData" pc="268435955" symbol="onPreviousPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="6" lineNum="143" parent="globals/ActivityData" pc="268435957" symbol="onPreviousPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="6" lineNum="145" parent="globals/ActivityData" pc="268436028" symbol="onPreviousPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="6" lineNum="147" parent="globals/ActivityData" pc="268436099" symbol="onPreviousPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="6" lineNum="148" parent="globals/ActivityData" pc="268436112" symbol="onPreviousPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="6" lineNum="152" parent="globals/ActivityData" pc="268436115" symbol="onPreviousPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="6" lineNum="153" parent="globals/ActivityData" pc="268436128" symbol="onPreviousPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="6" lineNum="156" parent="globals/ActivityData" pc="268436132" symbol="onPreviousPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="6" lineNum="160" parent="globals/ActivityData" pc="268436135" symbol="onPreviousPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="6" lineNum="163" parent="globals/ActivityData" pc="268436153" symbol="onPreviousPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="7" lineNum="192" parent="globals/ActivityData" pc="268436158" symbol="setAltitude"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="7" lineNum="193" parent="globals/ActivityData" pc="268436160" symbol="setAltitude"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="8" lineNum="196" parent="globals/ActivityData" pc="268436181" symbol="ascent"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="8" lineNum="197" parent="globals/ActivityData" pc="268436183" symbol="ascent"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="9" lineNum="188" parent="globals/ActivityData" pc="268436201" symbol="setHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="9" lineNum="189" parent="globals/ActivityData" pc="268436203" symbol="setHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="54" parent="globals/ActivityData" pc="268436224" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="55" parent="globals/ActivityData" pc="268436226" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="57" parent="globals/ActivityData" pc="268436377" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="58" parent="globals/ActivityData" pc="268436389" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="62" parent="globals/ActivityData" pc="268436392" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="63" parent="globals/ActivityData" pc="268436405" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="64" parent="globals/ActivityData" pc="268436418" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="67" parent="globals/ActivityData" pc="268436421" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="69" parent="globals/ActivityData" pc="268436472" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="70" parent="globals/ActivityData" pc="268436485" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="71" parent="globals/ActivityData" pc="268436503" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="72" parent="globals/ActivityData" pc="268436521" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="73" parent="globals/ActivityData" pc="268436530" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="76" parent="globals/ActivityData" pc="268436533" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="77" parent="globals/ActivityData" pc="268436546" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="81" parent="globals/ActivityData" pc="268436550" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="83" parent="globals/ActivityData" pc="268436553" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="84" parent="globals/ActivityData" pc="268436566" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="85" parent="globals/ActivityData" pc="268436584" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="10" lineNum="89" parent="globals/ActivityData" pc="268436587" symbol="onSelectButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="11" lineNum="116" parent="globals/ActivityData" pc="268436607" symbol="onNextPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="11" lineNum="117" parent="globals/ActivityData" pc="268436609" symbol="onNextPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="11" lineNum="119" parent="globals/ActivityData" pc="268436680" symbol="onNextPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="11" lineNum="121" parent="globals/ActivityData" pc="268436751" symbol="onNextPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="11" lineNum="122" parent="globals/ActivityData" pc="268436764" symbol="onNextPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="11" lineNum="126" parent="globals/ActivityData" pc="268436767" symbol="onNextPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="11" lineNum="127" parent="globals/ActivityData" pc="268436780" symbol="onNextPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="11" lineNum="130" parent="globals/ActivityData" pc="268436784" symbol="onNextPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="11" lineNum="134" parent="globals/ActivityData" pc="268436787" symbol="onNextPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="11" lineNum="137" parent="globals/ActivityData" pc="268436805" symbol="onNextPageButton"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="12" lineNum="200" parent="globals/ActivityData" pc="268436810" symbol="setTemperature"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="12" lineNum="201" parent="globals/ActivityData" pc="268436812" symbol="setTemperature"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="14" lineNum="26" parent="globals/ActivityParameter" pc="268436833" symbol="setValue"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="14" lineNum="27" parent="globals/ActivityParameter" pc="268436835" symbol="setValue"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="14" lineNum="29" parent="globals/ActivityParameter" pc="268436845" symbol="setValue"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="14" lineNum="30" parent="globals/ActivityParameter" pc="268436858" symbol="setValue"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="14" lineNum="31" parent="globals/ActivityParameter" pc="268436894" symbol="setValue"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="14" lineNum="33" parent="globals/ActivityParameter" pc="268436913" symbol="setValue"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="14" lineNum="34" parent="globals/ActivityParameter" pc="268436949" symbol="setValue"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="16" lineNum="39" parent="globals/ActivityParameter" pc="268436972" symbol="minMaxDiff"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="16" lineNum="40" parent="globals/ActivityParameter" pc="268436974" symbol="minMaxDiff"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="16" lineNum="41" parent="globals/ActivityParameter" pc="268437003" symbol="minMaxDiff"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityData.mc" id="16" lineNum="44" parent="globals/ActivityParameter" pc="268437024" symbol="minMaxDiff"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerApp.mc" id="17" lineNum="6" parent="globals/BrekiTrekkerApp" pc="268437027" symbol="&lt;init&gt;"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerApp.mc" id="18" lineNum="13" parent="globals/BrekiTrekkerApp" pc="268437046" symbol="onStart"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerApp.mc" id="19" lineNum="28" parent="globals/BrekiTrekkerApp" pc="268437049" symbol="getActivityView"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerApp.mc" id="19" lineNum="29" parent="globals/BrekiTrekkerApp" pc="268437051" symbol="getActivityView"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerApp.mc" id="20" lineNum="22" parent="globals/BrekiTrekkerApp" pc="268437060" symbol="getInitialView"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerApp.mc" id="20" lineNum="23" parent="globals/BrekiTrekkerApp" pc="268437062" symbol="getInitialView"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerApp.mc" id="20" lineNum="24" parent="globals/BrekiTrekkerApp" pc="268437096" symbol="getInitialView"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerApp.mc" id="21" lineNum="8" parent="globals/BrekiTrekkerApp" pc="268437153" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerApp.mc" id="21" lineNum="9" parent="globals/BrekiTrekkerApp" pc="268437155" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerApp.mc" id="22" lineNum="18" parent="globals/BrekiTrekkerApp" pc="268437174" symbol="onStop"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerApp.mc" id="23" lineNum="35" parent="globals" pc="268437177" symbol="getApp"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerApp.mc" id="23" lineNum="36" parent="globals" pc="268437187" symbol="getApp"/>
+<entry filename="d:\\src\\BrekiTrekker\\builds\\gen\\006-B2697-00\\source\\Rez.mcgen" id="24" lineNum="7" parent="globals/Rez" pc="268437203" symbol="&lt;init&gt;"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerView.mc" id="25" lineNum="6" parent="globals/BrekiTrekkerView" pc="268437227" symbol="&lt;init&gt;"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerView.mc" id="27" lineNum="39" parent="globals/BrekiTrekkerView" pc="268437246" symbol="updateView"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerView.mc" id="27" lineNum="41" parent="globals/BrekiTrekkerView" pc="268437248" symbol="updateView"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerView.mc" id="27" lineNum="44" parent="globals/BrekiTrekkerView" pc="268437268" symbol="updateView"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerView.mc" id="28" lineNum="13" parent="globals/BrekiTrekkerView" pc="268437285" symbol="onLayout"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerView.mc" id="28" lineNum="14" parent="globals/BrekiTrekkerView" pc="268437287" symbol="onLayout"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerView.mc" id="28" lineNum="16" parent="globals/BrekiTrekkerView" pc="268437328" symbol="onLayout"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerView.mc" id="28" lineNum="18" parent="globals/BrekiTrekkerView" pc="268437352" symbol="onLayout"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerView.mc" id="29" lineNum="8" parent="globals/BrekiTrekkerView" pc="268437386" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerView.mc" id="29" lineNum="9" parent="globals/BrekiTrekkerView" pc="268437388" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerView.mc" id="31" lineNum="28" parent="globals/BrekiTrekkerView" pc="268437407" symbol="onUpdate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerView.mc" id="31" lineNum="30" parent="globals/BrekiTrekkerView" pc="268437409" symbol="onUpdate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="34" lineNum="8" parent="globals/ActivityDisplay" pc="268437430" symbol="&lt;init&gt;"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="35" lineNum="97" parent="globals/ActivityDisplay" pc="268437449" symbol="_drawTimer"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="35" lineNum="98" parent="globals/ActivityDisplay" pc="268437453" symbol="_drawTimer"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="35" lineNum="99" parent="globals/ActivityDisplay" pc="268437481" symbol="_drawTimer"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="35" lineNum="100" parent="globals/ActivityDisplay" pc="268437508" symbol="_drawTimer"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="35" lineNum="101" parent="globals/ActivityDisplay" pc="268437541" symbol="_drawTimer"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="35" lineNum="103" parent="globals/ActivityDisplay" pc="268437551" symbol="_drawTimer"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="35" lineNum="105" parent="globals/ActivityDisplay" pc="268437551" symbol="_drawTimer"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="35" lineNum="106" parent="globals/ActivityDisplay" pc="268437562" symbol="_drawTimer"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="35" lineNum="110" parent="globals/ActivityDisplay" pc="268437641" symbol="_drawTimer"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="35" lineNum="115" parent="globals/ActivityDisplay" pc="268437727" symbol="_drawTimer"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="35" lineNum="118" parent="globals/ActivityDisplay" pc="268437734" symbol="_drawTimer"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="35" lineNum="119" parent="globals/ActivityDisplay" pc="268437756" symbol="_drawTimer"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="123" parent="globals/ActivityDisplay" pc="268437800" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="124" parent="globals/ActivityDisplay" pc="268437804" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="126" parent="globals/ActivityDisplay" pc="268437826" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="127" parent="globals/ActivityDisplay" pc="268437826" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="127" parent="globals/ActivityDisplay" pc="268437833" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="128" parent="globals/ActivityDisplay" pc="268437843" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="128" parent="globals/ActivityDisplay" pc="268437854" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="129" parent="globals/ActivityDisplay" pc="268437864" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="129" parent="globals/ActivityDisplay" pc="268437875" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="130" parent="globals/ActivityDisplay" pc="268437885" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="130" parent="globals/ActivityDisplay" pc="268437896" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="131" parent="globals/ActivityDisplay" pc="268437906" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="131" parent="globals/ActivityDisplay" pc="268437917" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="132" parent="globals/ActivityDisplay" pc="268437927" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="134" parent="globals/ActivityDisplay" pc="268437934" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="136" parent="globals/ActivityDisplay" pc="268437953" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="139" parent="globals/ActivityDisplay" pc="268437960" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="137" parent="globals/ActivityDisplay" pc="268437960" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="139" parent="globals/ActivityDisplay" pc="268437967" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="140" parent="globals/ActivityDisplay" pc="268438008" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="142" parent="globals/ActivityDisplay" pc="268438015" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="146" parent="globals/ActivityDisplay" pc="268438058" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="150" parent="globals/ActivityDisplay" pc="268438116" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="151" parent="globals/ActivityDisplay" pc="268438138" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="152" parent="globals/ActivityDisplay" pc="268438163" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="157" parent="globals/ActivityDisplay" pc="268438273" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="36" lineNum="158" parent="globals/ActivityDisplay" pc="268438298" symbol="_drawHeartRate"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="37" lineNum="197" parent="globals/ActivityDisplay" pc="268438403" symbol="_drawBatteryLevel"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="37" lineNum="198" parent="globals/ActivityDisplay" pc="268438407" symbol="_drawBatteryLevel"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="37" lineNum="199" parent="globals/ActivityDisplay" pc="268438426" symbol="_drawBatteryLevel"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="37" lineNum="200" parent="globals/ActivityDisplay" pc="268438443" symbol="_drawBatteryLevel"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="37" lineNum="201" parent="globals/ActivityDisplay" pc="268438465" symbol="_drawBatteryLevel"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="37" lineNum="203" parent="globals/ActivityDisplay" pc="268438522" symbol="_drawBatteryLevel"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="37" lineNum="205" parent="globals/ActivityDisplay" pc="268438544" symbol="_drawBatteryLevel"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="37" lineNum="206" parent="globals/ActivityDisplay" pc="268438572" symbol="_drawBatteryLevel"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="38" lineNum="20" parent="globals/ActivityDisplay" pc="268438636" symbol="updateData"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="38" lineNum="21" parent="globals/ActivityDisplay" pc="268438638" symbol="updateData"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="39" lineNum="59" parent="globals/ActivityDisplay" pc="268438649" symbol="_drawActivityScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="39" lineNum="60" parent="globals/ActivityDisplay" pc="268438651" symbol="_drawActivityScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="39" lineNum="61" parent="globals/ActivityDisplay" pc="268438665" symbol="_drawActivityScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="39" lineNum="62" parent="globals/ActivityDisplay" pc="268438679" symbol="_drawActivityScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="39" lineNum="63" parent="globals/ActivityDisplay" pc="268438693" symbol="_drawActivityScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="39" lineNum="64" parent="globals/ActivityDisplay" pc="268438707" symbol="_drawActivityScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="39" lineNum="65" parent="globals/ActivityDisplay" pc="268438721" symbol="_drawActivityScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="39" lineNum="67" parent="globals/ActivityDisplay" pc="268438735" symbol="_drawActivityScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="39" lineNum="69" parent="globals/ActivityDisplay" pc="268438792" symbol="_drawActivityScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="39" lineNum="70" parent="globals/ActivityDisplay" pc="268438806" symbol="_drawActivityScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="39" lineNum="74" parent="globals/ActivityDisplay" pc="268438809" symbol="_drawActivityScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="39" lineNum="75" parent="globals/ActivityDisplay" pc="268438831" symbol="_drawActivityScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="39" lineNum="79" parent="globals/ActivityDisplay" pc="268438880" symbol="_drawActivityScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="40" lineNum="24" parent="globals/ActivityDisplay" pc="268438885" symbol="draw"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="40" lineNum="25" parent="globals/ActivityDisplay" pc="268438887" symbol="draw"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="40" lineNum="27" parent="globals/ActivityDisplay" pc="268439044" symbol="draw"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="40" lineNum="28" parent="globals/ActivityDisplay" pc="268439058" symbol="draw"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="40" lineNum="33" parent="globals/ActivityDisplay" pc="268439061" symbol="draw"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="40" lineNum="34" parent="globals/ActivityDisplay" pc="268439075" symbol="draw"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="40" lineNum="37" parent="globals/ActivityDisplay" pc="268439078" symbol="draw"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="40" lineNum="38" parent="globals/ActivityDisplay" pc="268439092" symbol="draw"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="40" lineNum="40" parent="globals/ActivityDisplay" pc="268439095" symbol="draw"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="40" lineNum="41" parent="globals/ActivityDisplay" pc="268439109" symbol="draw"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="40" lineNum="43" parent="globals/ActivityDisplay" pc="268439112" symbol="draw"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="40" lineNum="44" parent="globals/ActivityDisplay" pc="268439126" symbol="draw"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="41" lineNum="84" parent="globals/ActivityDisplay" pc="268439131" symbol="_drawTime"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="41" lineNum="85" parent="globals/ActivityDisplay" pc="268439135" symbol="_drawTime"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="41" lineNum="87" parent="globals/ActivityDisplay" pc="268439172" symbol="_drawTime"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="41" lineNum="90" parent="globals/ActivityDisplay" pc="268439260" symbol="_drawTime"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="41" lineNum="93" parent="globals/ActivityDisplay" pc="268439267" symbol="_drawTime"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="41" lineNum="94" parent="globals/ActivityDisplay" pc="268439289" symbol="_drawTime"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="42" lineNum="237" parent="globals/ActivityDisplay" pc="268439324" symbol="_drawDiscardingScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="42" lineNum="238" parent="globals/ActivityDisplay" pc="268439326" symbol="_drawDiscardingScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="42" lineNum="239" parent="globals/ActivityDisplay" pc="268439348" symbol="_drawDiscardingScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="42" lineNum="244" parent="globals/ActivityDisplay" pc="268439391" symbol="_drawDiscardingScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="42" lineNum="245" parent="globals/ActivityDisplay" pc="268439413" symbol="_drawDiscardingScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="43" lineNum="211" parent="globals/ActivityDisplay" pc="268439463" symbol="_drawSavingScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="43" lineNum="212" parent="globals/ActivityDisplay" pc="268439465" symbol="_drawSavingScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="43" lineNum="213" parent="globals/ActivityDisplay" pc="268439487" symbol="_drawSavingScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="43" lineNum="218" parent="globals/ActivityDisplay" pc="268439530" symbol="_drawSavingScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="43" lineNum="219" parent="globals/ActivityDisplay" pc="268439552" symbol="_drawSavingScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="44" lineNum="48" parent="globals/ActivityDisplay" pc="268439602" symbol="_drawStartupScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="44" lineNum="49" parent="globals/ActivityDisplay" pc="268439606" symbol="_drawStartupScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="44" lineNum="51" parent="globals/ActivityDisplay" pc="268439613" symbol="_drawStartupScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="44" lineNum="52" parent="globals/ActivityDisplay" pc="268439620" symbol="_drawStartupScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="44" lineNum="55" parent="globals/ActivityDisplay" pc="268439627" symbol="_drawStartupScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="44" lineNum="56" parent="globals/ActivityDisplay" pc="268439649" symbol="_drawStartupScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="45" lineNum="165" parent="globals/ActivityDisplay" pc="268439684" symbol="_drawAltitude"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="45" lineNum="166" parent="globals/ActivityDisplay" pc="268439688" symbol="_drawAltitude"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="45" lineNum="168" parent="globals/ActivityDisplay" pc="268439758" symbol="_drawAltitude"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="45" lineNum="171" parent="globals/ActivityDisplay" pc="268439825" symbol="_drawAltitude"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="45" lineNum="172" parent="globals/ActivityDisplay" pc="268439832" symbol="_drawAltitude"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="45" lineNum="173" parent="globals/ActivityDisplay" pc="268439854" symbol="_drawAltitude"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="45" lineNum="175" parent="globals/ActivityDisplay" pc="268439888" symbol="_drawAltitude"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="45" lineNum="176" parent="globals/ActivityDisplay" pc="268439910" symbol="_drawAltitude"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="46" lineNum="250" parent="globals/ActivityDisplay" pc="268439951" symbol="_drawMenu"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="46" lineNum="251" parent="globals/ActivityDisplay" pc="268439953" symbol="_drawMenu"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="46" lineNum="252" parent="globals/ActivityDisplay" pc="268439976" symbol="_drawMenu"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="46" lineNum="255" parent="globals/ActivityDisplay" pc="268440001" symbol="_drawMenu"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="46" lineNum="258" parent="globals/ActivityDisplay" pc="268440023" symbol="_drawMenu"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="46" lineNum="262" parent="globals/ActivityDisplay" pc="268440063" symbol="_drawMenu"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="46" lineNum="263" parent="globals/ActivityDisplay" pc="268440086" symbol="_drawMenu"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="46" lineNum="266" parent="globals/ActivityDisplay" pc="268440111" symbol="_drawMenu"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="46" lineNum="269" parent="globals/ActivityDisplay" pc="268440133" symbol="_drawMenu"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="47" lineNum="9" parent="globals/ActivityDisplay" pc="268440174" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="47" lineNum="10" parent="globals/ActivityDisplay" pc="268440178" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="47" lineNum="12" parent="globals/ActivityDisplay" pc="268440198" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="47" lineNum="14" parent="globals/ActivityDisplay" pc="268440215" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="47" lineNum="15" parent="globals/ActivityDisplay" pc="268440231" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="47" lineNum="16" parent="globals/ActivityDisplay" pc="268440247" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="47" lineNum="17" parent="globals/ActivityDisplay" pc="268440269" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="48" lineNum="180" parent="globals/ActivityDisplay" pc="268440292" symbol="_drawTemperature"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="48" lineNum="183" parent="globals/ActivityDisplay" pc="268440296" symbol="_drawTemperature"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="48" lineNum="182" parent="globals/ActivityDisplay" pc="268440296" symbol="_drawTemperature"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="48" lineNum="184" parent="globals/ActivityDisplay" pc="268440321" symbol="_drawTemperature"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="48" lineNum="188" parent="globals/ActivityDisplay" pc="268440394" symbol="_drawTemperature"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="48" lineNum="191" parent="globals/ActivityDisplay" pc="268440401" symbol="_drawTemperature"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="48" lineNum="192" parent="globals/ActivityDisplay" pc="268440408" symbol="_drawTemperature"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="48" lineNum="193" parent="globals/ActivityDisplay" pc="268440430" symbol="_drawTemperature"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="49" lineNum="224" parent="globals/ActivityDisplay" pc="268440471" symbol="_drawConfirmDiscardScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="49" lineNum="225" parent="globals/ActivityDisplay" pc="268440473" symbol="_drawConfirmDiscardScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="49" lineNum="226" parent="globals/ActivityDisplay" pc="268440495" symbol="_drawConfirmDiscardScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="49" lineNum="231" parent="globals/ActivityDisplay" pc="268440538" symbol="_drawConfirmDiscardScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\ActivityDisplay.mc" id="49" lineNum="232" parent="globals/ActivityDisplay" pc="268440560" symbol="_drawConfirmDiscardScreen"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerMenuDelegate.mc" id="50" lineNum="5" parent="globals/BrekiTrekkerMenuDelegate" pc="268440610" symbol="&lt;init&gt;"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerMenuDelegate.mc" id="51" lineNum="11" parent="globals/BrekiTrekkerMenuDelegate" pc="268440629" symbol="onMenuItem"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerMenuDelegate.mc" id="51" lineNum="12" parent="globals/BrekiTrekkerMenuDelegate" pc="268440631" symbol="onMenuItem"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerMenuDelegate.mc" id="51" lineNum="13" parent="globals/BrekiTrekkerMenuDelegate" pc="268440642" symbol="onMenuItem"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerMenuDelegate.mc" id="51" lineNum="14" parent="globals/BrekiTrekkerMenuDelegate" pc="268440666" symbol="onMenuItem"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerMenuDelegate.mc" id="51" lineNum="15" parent="globals/BrekiTrekkerMenuDelegate" pc="268440677" symbol="onMenuItem"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerMenuDelegate.mc" id="52" lineNum="7" parent="globals/BrekiTrekkerMenuDelegate" pc="268440702" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerMenuDelegate.mc" id="52" lineNum="8" parent="globals/BrekiTrekkerMenuDelegate" pc="268440704" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="53" lineNum="9" parent="globals/BrekiTrekkerDelegate" pc="268440723" symbol="&lt;init&gt;"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="53" lineNum="98" parent="globals/BrekiTrekkerDelegate" pc="268440741" symbol="&lt;init&gt;"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="53" lineNum="100" parent="globals/BrekiTrekkerDelegate" pc="268440775" symbol="&lt;init&gt;"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="54" lineNum="61" parent="globals/BrekiTrekkerDelegate" pc="268440804" symbol="onBack"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="54" lineNum="62" parent="globals/BrekiTrekkerDelegate" pc="268440806" symbol="onBack"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="54" lineNum="63" parent="globals/BrekiTrekkerDelegate" pc="268440827" symbol="onBack"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="54" lineNum="65" parent="globals/BrekiTrekkerDelegate" pc="268440845" symbol="onBack"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="54" lineNum="67" parent="globals/BrekiTrekkerDelegate" pc="268440857" symbol="onBack"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="55" lineNum="22" parent="globals/BrekiTrekkerDelegate" pc="268440860" symbol="onMenu"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="55" lineNum="23" parent="globals/BrekiTrekkerDelegate" pc="268440862" symbol="onMenu"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="55" lineNum="27" parent="globals/BrekiTrekkerDelegate" pc="268440947" symbol="onMenu"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="56" lineNum="81" parent="globals/BrekiTrekkerDelegate" pc="268440950" symbol="onPreviousPage"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="56" lineNum="82" parent="globals/BrekiTrekkerDelegate" pc="268440954" symbol="onPreviousPage"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="56" lineNum="83" parent="globals/BrekiTrekkerDelegate" pc="268440975" symbol="onPreviousPage"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="56" lineNum="84" parent="globals/BrekiTrekkerDelegate" pc="268440994" symbol="onPreviousPage"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="56" lineNum="85" parent="globals/BrekiTrekkerDelegate" pc="268440999" symbol="onPreviousPage"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="56" lineNum="88" parent="globals/BrekiTrekkerDelegate" pc="268441014" symbol="onPreviousPage"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="57" lineNum="30" parent="globals/BrekiTrekkerDelegate" pc="268441017" symbol="onPosition"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="57" lineNum="31" parent="globals/BrekiTrekkerDelegate" pc="268441019" symbol="onPosition"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="58" lineNum="91" parent="globals/BrekiTrekkerDelegate" pc="268441041" symbol="_updateActivityView"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="58" lineNum="92" parent="globals/BrekiTrekkerDelegate" pc="268441045" symbol="_updateActivityView"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="58" lineNum="93" parent="globals/BrekiTrekkerDelegate" pc="268441062" symbol="_updateActivityView"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="58" lineNum="95" parent="globals/BrekiTrekkerDelegate" pc="268441084" symbol="_updateActivityView"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="59" lineNum="11" parent="globals/BrekiTrekkerDelegate" pc="268441111" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="59" lineNum="12" parent="globals/BrekiTrekkerDelegate" pc="268441113" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="59" lineNum="14" parent="globals/BrekiTrekkerDelegate" pc="268441131" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="59" lineNum="17" parent="globals/BrekiTrekkerDelegate" pc="268441168" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="59" lineNum="19" parent="globals/BrekiTrekkerDelegate" pc="268441216" symbol="initialize"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="60" lineNum="34" parent="globals/BrekiTrekkerDelegate" pc="268441249" symbol="onSensor"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="60" lineNum="35" parent="globals/BrekiTrekkerDelegate" pc="268441251" symbol="onSensor"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="60" lineNum="36" parent="globals/BrekiTrekkerDelegate" pc="268441277" symbol="onSensor"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="60" lineNum="37" parent="globals/BrekiTrekkerDelegate" pc="268441303" symbol="onSensor"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="61" lineNum="41" parent="globals/BrekiTrekkerDelegate" pc="268441330" symbol="onSelect"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="61" lineNum="42" parent="globals/BrekiTrekkerDelegate" pc="268441334" symbol="onSelect"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="61" lineNum="44" parent="globals/BrekiTrekkerDelegate" pc="268441355" symbol="onSelect"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="61" lineNum="46" parent="globals/BrekiTrekkerDelegate" pc="268441371" symbol="onSelect"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="61" lineNum="48" parent="globals/BrekiTrekkerDelegate" pc="268441389" symbol="onSelect"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="61" lineNum="50" parent="globals/BrekiTrekkerDelegate" pc="268441405" symbol="onSelect"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="61" lineNum="51" parent="globals/BrekiTrekkerDelegate" pc="268441430" symbol="onSelect"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="61" lineNum="52" parent="globals/BrekiTrekkerDelegate" pc="268441464" symbol="onSelect"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="61" lineNum="53" parent="globals/BrekiTrekkerDelegate" pc="268441468" symbol="onSelect"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="61" lineNum="56" parent="globals/BrekiTrekkerDelegate" pc="268441512" symbol="onSelect"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="61" lineNum="58" parent="globals/BrekiTrekkerDelegate" pc="268441524" symbol="onSelect"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="62" lineNum="70" parent="globals/BrekiTrekkerDelegate" pc="268441527" symbol="onNextPage"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="62" lineNum="71" parent="globals/BrekiTrekkerDelegate" pc="268441531" symbol="onNextPage"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="62" lineNum="73" parent="globals/BrekiTrekkerDelegate" pc="268441552" symbol="onNextPage"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="62" lineNum="74" parent="globals/BrekiTrekkerDelegate" pc="268441571" symbol="onNextPage"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="62" lineNum="75" parent="globals/BrekiTrekkerDelegate" pc="268441576" symbol="onNextPage"/>
+<entry filename="D:\\src\\BrekiTrekker\\source\\BrekiTrekkerDelegate.mc" id="62" lineNum="78" parent="globals/BrekiTrekkerDelegate" pc="268441591" symbol="onNextPage"/>
+<entry filename="d:\\src\\BrekiTrekker\\builds\\gen\\006-B2697-00\\source\\Rez.mcgen" id="63" lineNum="19" parent="globals/Rez/Layouts" pc="268441594" symbol="MainLayout"/>
+<entry filename="d:\\src\\BrekiTrekker\\builds\\gen\\006-B2697-00\\source\\Rez.mcgen" id="63" lineNum="20" parent="globals/Rez/Layouts" pc="268441606" symbol="MainLayout"/>
+<entry filename="d:\\src\\BrekiTrekker\\builds\\gen\\006-B2697-00\\source\\Rez.mcgen" id="63" lineNum="22" parent="globals/Rez/Layouts" pc="268441653" symbol="MainLayout"/>
+<entry filename="d:\\src\\BrekiTrekker\\builds\\gen\\006-B2697-00\\source\\Rez.mcgen" id="64" lineNum="27" parent="globals/Rez/Menus/MainMenu" pc="268441670" symbol="&lt;init&gt;"/>
+<entry filename="d:\\src\\BrekiTrekker\\builds\\gen\\006-B2697-00\\source\\Rez.mcgen" id="65" lineNum="28" parent="globals/Rez/Menus/MainMenu" pc="268441689" symbol="initialize"/>
+<entry filename="d:\\src\\BrekiTrekker\\builds\\gen\\006-B2697-00\\source\\Rez.mcgen" id="65" lineNum="29" parent="globals/Rez/Menus/MainMenu" pc="268441691" symbol="initialize"/>
+<entry filename="d:\\src\\BrekiTrekker\\builds\\gen\\006-B2697-00\\source\\Rez.mcgen" id="65" lineNum="30" parent="globals/Rez/Menus/MainMenu" pc="268441709" symbol="initialize"/>
+<entry filename="d:\\src\\BrekiTrekker\\builds\\gen\\006-B2697-00\\source\\Rez.mcgen" id="65" lineNum="31" parent="globals/Rez/Menus/MainMenu" pc="268441765" symbol="initialize"/>
+</pcToLineNum>
+<symbolTable>
+<entry field="true" id="32" symbol="currentValue"/>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry id="51" method="true" symbol="_drawStartupScreen"/>
+<entry id="44" method="true" symbol="_drawAltitude"/>
+<entry id="43" method="true" symbol="_drawActivityScreen"/>
+<entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+<entry id="18" method="true" symbol="activityDuration"/>
+<entry id="8" module="true" symbol="globals/Rez/Menus"/>
+<entry field="true" id="8388731" symbol="startTime"/>
+<entry id="8388638" module="true" symbol="ActivityRecording"/>
+<entry id="67" method="true" symbol="MainLayout"/>
+<entry field="true" id="57" symbol="&lt;globals/ActivityDisplay/&lt;&gt;screenHeight&gt;"/>
+<entry field="true" id="8388890" symbol="sport"/>
+<entry id="15" object="true" symbol="BrekiTrekkerDelegate"/>
+<entry id="53" method="true" symbol="_drawTime"/>
+<entry id="24" method="true" symbol="onPreviousPageButton"/>
+<entry id="27" method="true" symbol="setAltitude"/>
+<entry id="64" method="true" symbol="onPosition"/>
+<entry id="8388924" module="true" symbol="Gregorian"/>
+<entry field="true" id="26" symbol="selectedMenuItem"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry id="20" method="true" symbol="ascent"/>
+<entry field="true" id="8388962" symbol="temperature"/>
+<entry field="true" id="69" symbol="AppName"/>
+<entry field="true" id="8388963" symbol="altitude"/>
+<entry id="9" module="true" symbol="globals/Rez/Strings"/>
+<entry id="8389080" method="true" symbol="onMenu"/>
+<entry id="8388772" module="true" object="true" symbol="Fonts"/>
+<entry id="59" method="true" symbol="updateData"/>
+<entry id="25" method="true" symbol="onSelectButton"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry id="34" method="true" symbol="minMaxDiff"/>
+<entry id="8389081" method="true" symbol="onBack"/>
+<entry field="true" id="58" symbol="&lt;globals/ActivityDisplay/&lt;&gt;screenWidth&gt;"/>
+<entry field="true" id="35" symbol="minValue"/>
+<entry id="47" method="true" symbol="_drawDiscardingScreen"/>
+<entry id="3" module="true" symbol="globals/Rez"/>
+<entry id="8389090" object="true" symbol="MenuItem"/>
+<entry id="60" method="true" symbol="_updateActivityView"/>
+<entry id="10" object="true" symbol="ActivityData"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry id="31" method="true" symbol="initial"/>
+<entry id="73" symbol="item_2"/>
+<entry id="72" symbol="item_1"/>
+<entry id="8389079" method="true" symbol="onPreviousPage"/>
+<entry id="39" module="true" symbol="Menus"/>
+<entry id="8389275" method="true" symbol="getApp"/>
+<entry id="7" module="true" symbol="globals/Rez/Layouts"/>
+<entry field="true" id="36" symbol="&lt;globals/BrekiTrekkerApp/&lt;&gt;activityView&gt;"/>
+<entry field="true" id="62" symbol="&lt;globals/BrekiTrekkerDelegate/&lt;&gt;activityTimer&gt;"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry id="52" method="true" symbol="_drawTemperature"/>
+<entry field="true" id="8389063" symbol="identifier"/>
+<entry id="23" method="true" symbol="onNextPageButton"/>
+<entry field="true" id="21" symbol="batteryLevel"/>
+<entry field="true" id="40" symbol="&lt;globals/BrekiTrekkerView/&lt;&gt;activityDisplay&gt;"/>
+<entry id="6" module="true" symbol="globals/Rez/JsonData"/>
+<entry field="true" id="61" symbol="&lt;globals/BrekiTrekkerDelegate/&lt;&gt;activityData&gt;"/>
+<entry id="30" method="true" symbol="startActivity"/>
+<entry id="4" module="true" symbol="globals/Rez/Drawables"/>
+<entry field="true" id="56" symbol="&lt;globals/ActivityDisplay/&lt;&gt;centerY&gt;"/>
+<entry id="68" object="true" symbol="MainMenu"/>
+<entry field="true" id="55" symbol="&lt;globals/ActivityDisplay/&lt;&gt;centerX&gt;"/>
+<entry id="28" method="true" symbol="setHeartRate"/>
+<entry id="11" object="true" symbol="ActivityDisplay"/>
+<entry id="8388644" module="true" symbol="System"/>
+<entry id="8389619" method="true" symbol="onSelect"/>
+<entry id="8388645" module="true" symbol="Time"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry id="2" module="true" symbol="globals/ActivityData/&lt;statics&gt;"/>
+<entry id="54" method="true" symbol="_drawTimer"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry field="true" id="19" symbol="activitySession"/>
+<entry id="65" method="true" symbol="onSensor"/>
+<entry id="8390088" module="true" object="true" symbol="JsonData"/>
+<entry id="49" method="true" symbol="_drawMenu"/>
+<entry id="8389068" method="true" symbol="draw"/>
+<entry id="16" object="true" symbol="BrekiTrekkerMenuDelegate"/>
+<entry field="true" id="66" symbol="LauncherIcon"/>
+<entry field="true" id="42" symbol="&lt;globals/ActivityDisplay/&lt;&gt;_activityData&gt;"/>
+<entry id="8388610" symbol="statics"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry id="8388643" module="true" symbol="Sensor"/>
+<entry id="8389350" module="true" symbol="globals"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry field="true" id="8388960" symbol="heartRate"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry id="37" method="true" symbol="getActivityView"/>
+<entry id="48" method="true" symbol="_drawHeartRate"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry field="true" id="8388892" symbol="name"/>
+<entry id="41" method="true" symbol="updateView"/>
+<entry id="29" method="true" symbol="setTemperature"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry id="8389109" method="true" symbol="onMenuItem"/>
+<entry id="13" object="true" symbol="AppState"/>
+<entry id="22" method="true" symbol="onBackButton"/>
+<entry id="14" object="true" symbol="BrekiTrekkerApp"/>
+<entry field="true" id="63" symbol="&lt;globals/BrekiTrekkerDelegate/&lt;&gt;activityView&gt;"/>
+<entry id="8388646" module="true" object="true" symbol="Timer"/>
+<entry id="38" module="true" symbol="Layouts"/>
+<entry field="true" id="8389487" symbol="state"/>
+<entry id="50" method="true" symbol="_drawSavingScreen"/>
+<entry id="46" method="true" symbol="_drawConfirmDiscardScreen"/>
+<entry id="45" method="true" symbol="_drawBatteryLevel"/>
+<entry id="8388642" module="true" symbol="Position"/>
+<entry id="17" object="true" symbol="BrekiTrekkerView"/>
+<entry id="5" module="true" symbol="globals/Rez/Fonts"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry id="12" object="true" symbol="ActivityParameter"/>
+<entry id="8390426" method="true" symbol="setValue"/>
+<entry id="8389078" method="true" symbol="onNextPage"/>
+<entry id="8388635" module="true" symbol="Application"/>
+<entry field="true" id="33" symbol="maxValue"/>
+<entry field="true" id="71" symbol="menu_label_2"/>
+<entry field="true" id="70" symbol="menu_label_1"/>
+</symbolTable>
+<localVars>
+<entry arg="true" endPc="268436180" name="value" stackId="1" startPc="268436158"/>
+<entry arg="true" endPc="268436223" name="value" stackId="1" startPc="268436201"/>
+<entry arg="true" endPc="268436832" name="value" stackId="1" startPc="268436810"/>
+<entry arg="true" endPc="268436971" name="value" stackId="1" startPc="268436833"/>
+<entry arg="true" endPc="268437284" name="activityData" stackId="1" startPc="268437246"/>
+<entry arg="true" endPc="268437385" name="dc" stackId="1" startPc="268437285"/>
+<entry arg="true" endPc="268437429" name="dc" stackId="1" startPc="268437407"/>
+<entry arg="true" endPc="268437799" name="dc" stackId="1" startPc="268437449"/>
+<entry endPc="268437798" name="activityDurationInSeconds" stackId="2" startPc="268437453"/>
+<entry endPc="268437798" name="hours" stackId="3" startPc="268437453"/>
+<entry endPc="268437798" name="minutes" stackId="4" startPc="268437453"/>
+<entry endPc="268437798" name="seconds" stackId="5" startPc="268437453"/>
+<entry endPc="268437798" name="timerText" stackId="6" startPc="268437453"/>
+<entry endPc="268437798" name="hvCenter" stackId="7" startPc="268437453"/>
+<entry arg="true" endPc="268438402" name="dc" stackId="1" startPc="268437800"/>
+<entry endPc="268438401" name="heartRate" stackId="2" startPc="268437804"/>
+<entry endPc="268438401" name="color" stackId="3" startPc="268437804"/>
+<entry endPc="268438401" name="xPos" stackId="4" startPc="268437804"/>
+<entry endPc="268438401" name="heartRateText" stackId="5" startPc="268437804"/>
+<entry arg="true" endPc="268438635" name="dc" stackId="1" startPc="268438403"/>
+<entry endPc="268438631" name="indicatorWidth" stackId="2" startPc="268438426"/>
+<entry arg="true" endPc="268438648" name="activityData" stackId="1" startPc="268438636"/>
+<entry arg="true" endPc="268438884" name="dc" stackId="1" startPc="268438649"/>
+<entry arg="true" endPc="268439130" name="dc" stackId="1" startPc="268438885"/>
+<entry arg="true" endPc="268439323" name="dc" stackId="1" startPc="268439131"/>
+<entry endPc="268439322" name="now" stackId="2" startPc="268439135"/>
+<entry endPc="268439322" name="timeText" stackId="3" startPc="268439135"/>
+<entry endPc="268439322" name="hvCenter" stackId="4" startPc="268439135"/>
+<entry arg="true" endPc="268439462" name="dc" stackId="1" startPc="268439324"/>
+<entry arg="true" endPc="268439601" name="dc" stackId="1" startPc="268439463"/>
+<entry arg="true" endPc="268439683" name="dc" stackId="1" startPc="268439602"/>
+<entry endPc="268439682" name="timerText" stackId="2" startPc="268439606"/>
+<entry endPc="268439682" name="font" stackId="3" startPc="268439606"/>
+<entry endPc="268439682" name="justification" stackId="4" startPc="268439606"/>
+<entry arg="true" endPc="268439950" name="dc" stackId="1" startPc="268439684"/>
+<entry endPc="268439949" name="altText" stackId="2" startPc="268439688"/>
+<entry endPc="268439949" name="ascendText" stackId="3" startPc="268439688"/>
+<entry endPc="268439949" name="xPos" stackId="4" startPc="268439688"/>
+<entry arg="true" endPc="268440173" name="dc" stackId="1" startPc="268439951"/>
+<entry arg="true" endPc="268440291" name="params" stackId="1" startPc="268440174"/>
+<entry endPc="268440290" name="device" stackId="2" startPc="268440178"/>
+<entry arg="true" endPc="268440470" name="dc" stackId="1" startPc="268440292"/>
+<entry endPc="268440469" name="temperatureText" stackId="2" startPc="268440296"/>
+<entry endPc="268440469" name="xPos" stackId="3" startPc="268440296"/>
+<entry arg="true" endPc="268440609" name="dc" stackId="1" startPc="268440471"/>
+<entry arg="true" endPc="268440701" name="item" stackId="1" startPc="268440629"/>
+<entry endPc="268441016" name="refreshDisplay" stackId="1" startPc="268440954"/>
+<entry arg="true" endPc="268441040" name="info" stackId="1" startPc="268441017"/>
+<entry endPc="268441109" name="systemStats" stackId="1" startPc="268441045"/>
+<entry arg="true" endPc="268441329" name="info" stackId="1" startPc="268441249"/>
+<entry endPc="268441526" name="stateBefore" stackId="1" startPc="268441334"/>
+<entry endPc="268441526" name="stateAfter" stackId="2" startPc="268441334"/>
+<entry endPc="268441508" name="repeat" stackId="3" startPc="268441430"/>
+<entry endPc="268441593" name="refreshDisplay" stackId="1" startPc="268441531"/>
+<entry arg="true" endPc="268441669" name="dc" stackId="1" startPc="268441594"/>
+<entry endPc="268441669" name="rez_cmp_local_custom_drawable_activity_display" stackId="2" startPc="268441606"/>
+</localVars>
+<annotations>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_2"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_1"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+</annotations>
+<dataEntryOffsetMappings>
+<dataEntry label="globals" offset="95" parentId="" symbolId="globals" type="module"/>
+<dataEntry label="globals/ActivityData" offset="222" parentId="globals" symbolId="ActivityData" type="class"/>
+<dataEntry label="globals/ActivityData/&lt;statics&gt;" offset="413" parentId="ActivityData" symbolId="&lt;statics&gt;" type="module"/>
+<dataEntry label="globals/ActivityParameter" offset="452" parentId="globals" symbolId="ActivityParameter" type="class"/>
+<dataEntry label="globals/BrekiTrekkerApp" offset="539" parentId="globals" symbolId="BrekiTrekkerApp" type="class"/>
+<dataEntry label="globals/Rez" offset="626" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/BrekiTrekkerView" offset="705" parentId="globals" symbolId="BrekiTrekkerView" type="class"/>
+<dataEntry label="globals/MenuItem" offset="800" parentId="globals" symbolId="MenuItem" type="class"/>
+<dataEntry label="globals/AppState" offset="847" parentId="globals" symbolId="AppState" type="class"/>
+<dataEntry label="globals/ActivityDisplay" offset="894" parentId="globals" symbolId="ActivityDisplay" type="class"/>
+<dataEntry label="globals/BrekiTrekkerMenuDelegate" offset="1093" parentId="globals" symbolId="BrekiTrekkerMenuDelegate" type="class"/>
+<dataEntry label="globals/BrekiTrekkerDelegate" offset="1148" parentId="globals" symbolId="BrekiTrekkerDelegate" type="class"/>
+<dataEntry label="globals/Rez/Drawables" offset="1283" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Layouts" offset="1322" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry label="globals/Rez/Menus" offset="1361" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry label="globals/Rez/Fonts" offset="1400" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="1431" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry label="globals/Rez/JsonData" offset="1486" parentId="Rez" symbolId="JsonData" type="module"/>
+<dataEntry label="globals/Rez/Menus/MainMenu" offset="1517" parentId="Menus" symbolId="MainMenu" type="class"/>
+</dataEntryOffsetMappings>
+<functions>
+<functionEntry accessMode="public" endPc="268435562" name="&lt;init&gt;" parent="ActivityData" startPc="268435460">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="globals/ActivityData">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435587" name="initial" parent="ActivityData" startPc="268435563">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435788" name="onBackButton" parent="ActivityData" startPc="268435588">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435842" name="activityDuration" parent="ActivityData" startPc="268435789">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435954" name="startActivity" parent="ActivityData" startPc="268435843">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436157" name="onPreviousPageButton" parent="ActivityData" startPc="268435955">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436180" name="setAltitude" parent="ActivityData" startPc="268436158">
+<param id="value"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436200" name="ascent" parent="ActivityData" startPc="268436181">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436223" name="setHeartRate" parent="ActivityData" startPc="268436201">
+<param id="value"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436606" name="onSelectButton" parent="ActivityData" startPc="268436224">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436809" name="onNextPageButton" parent="ActivityData" startPc="268436607">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436832" name="setTemperature" parent="ActivityData" startPc="268436810">
+<param id="value"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="ActivityData">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="ActivityParameter">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436971" name="setValue" parent="ActivityParameter" startPc="268436833">
+<param id="value"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="ActivityParameter">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437026" name="minMaxDiff" parent="ActivityParameter" startPc="268436972">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437045" name="&lt;init&gt;" parent="BrekiTrekkerApp" startPc="268437027">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437048" name="onStart" parent="BrekiTrekkerApp" startPc="268437046">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437059" name="getActivityView" parent="BrekiTrekkerApp" startPc="268437049">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437152" name="getInitialView" parent="BrekiTrekkerApp" startPc="268437060">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437173" name="initialize" parent="BrekiTrekkerApp" startPc="268437153">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437176" name="onStop" parent="BrekiTrekkerApp" startPc="268437174">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437202" name="getApp" startPc="268437177">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437226" name="&lt;init&gt;" parent="Rez" startPc="268437203">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437245" name="&lt;init&gt;" parent="BrekiTrekkerView" startPc="268437227">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onShow" parent="BrekiTrekkerView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437284" name="updateView" parent="BrekiTrekkerView" startPc="268437246">
+<param id="activityData"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437385" name="onLayout" parent="BrekiTrekkerView" startPc="268437285">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437406" name="initialize" parent="BrekiTrekkerView" startPc="268437386">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onHide" parent="BrekiTrekkerView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437429" name="onUpdate" parent="BrekiTrekkerView" startPc="268437407">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="MenuItem">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="MenuItem">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="AppState">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="AppState">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437448" name="&lt;init&gt;" parent="ActivityDisplay" startPc="268437430">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437799" name="_drawTimer" parent="ActivityDisplay" startPc="268437449">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438402" name="_drawHeartRate" parent="ActivityDisplay" startPc="268437800">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438635" name="_drawBatteryLevel" parent="ActivityDisplay" startPc="268438403">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438648" name="updateData" parent="ActivityDisplay" startPc="268438636">
+<param id="activityData"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438884" name="_drawActivityScreen" parent="ActivityDisplay" startPc="268438649">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439130" name="draw" parent="ActivityDisplay" startPc="268438885">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439323" name="_drawTime" parent="ActivityDisplay" startPc="268439131">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439462" name="_drawDiscardingScreen" parent="ActivityDisplay" startPc="268439324">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439601" name="_drawSavingScreen" parent="ActivityDisplay" startPc="268439463">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439683" name="_drawStartupScreen" parent="ActivityDisplay" startPc="268439602">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439950" name="_drawAltitude" parent="ActivityDisplay" startPc="268439684">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440173" name="_drawMenu" parent="ActivityDisplay" startPc="268439951">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440291" name="initialize" parent="ActivityDisplay" startPc="268440174">
+<param id="params"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440470" name="_drawTemperature" parent="ActivityDisplay" startPc="268440292">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440609" name="_drawConfirmDiscardScreen" parent="ActivityDisplay" startPc="268440471">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440628" name="&lt;init&gt;" parent="BrekiTrekkerMenuDelegate" startPc="268440610">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440701" name="onMenuItem" parent="BrekiTrekkerMenuDelegate" startPc="268440629">
+<param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440722" name="initialize" parent="BrekiTrekkerMenuDelegate" startPc="268440702">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440803" name="&lt;init&gt;" parent="BrekiTrekkerDelegate" startPc="268440723">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440859" name="onBack" parent="BrekiTrekkerDelegate" startPc="268440804">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440949" name="onMenu" parent="BrekiTrekkerDelegate" startPc="268440860">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441016" name="onPreviousPage" parent="BrekiTrekkerDelegate" startPc="268440950">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441040" name="onPosition" parent="BrekiTrekkerDelegate" startPc="268441017">
+<param id="info"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441110" name="_updateActivityView" parent="BrekiTrekkerDelegate" startPc="268441041">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441248" name="initialize" parent="BrekiTrekkerDelegate" startPc="268441111">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441329" name="onSensor" parent="BrekiTrekkerDelegate" startPc="268441249">
+<param id="info"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441526" name="onSelect" parent="BrekiTrekkerDelegate" startPc="268441330">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441593" name="onNextPage" parent="BrekiTrekkerDelegate" startPc="268441527">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Fonts">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="JsonData">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441669" name="MainLayout" parent="Layouts" startPc="268441594">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441688" name="&lt;init&gt;" parent="MainMenu" startPc="268441670">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441821" name="initialize" parent="MainMenu" startPc="268441689">
+<documentation/>
+</functionEntry>
+</functions>
+</debugInfo>

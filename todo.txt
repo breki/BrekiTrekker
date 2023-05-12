@@ -1,5 +1,34 @@
+- back button on START screen should exit the app
+
 - how to upload the activity?
     - do we need to add fields?
+    - check out RecordSample SDK sample
+
+	- native FIT fields? 
+		example: `total_hemoglobin_conc`
+		- timestamp
+		- position_lat
+		- position_long
+		- altitude
+		- distance
+		- speed
+		- heart_rate
+		- cadence
+		- temperature
+
+
+```
+private function createMinHrDataField() {
+	me.mMinHrField = me.mFitSession.createField(
+		"min_hr",
+		me.MinHrFieldId,
+		FitContributor.DATA_TYPE_UINT16,
+		{:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>"bpm"}
+	);
+```
+
+- indicate when the GPS is ready
+- icon for the app
 
 - display distance
     - how to calculate it?

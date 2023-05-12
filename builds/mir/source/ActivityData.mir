@@ -1,0 +1,789 @@
+[ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 2; ]
+import Toybox.Time;
+[ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 3; ]
+import Toybox.ActivityRecording;
+[ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 5; ]
+class AppState{
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 5; ]
+    function initialize() as Void {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 6; ]
+    enum {
+        [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 7; @position = 8; ]
+        INITIAL,
+        [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 8; @position = 8; ]
+        RUNNING,
+        [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 9; @position = 8; ]
+        MENU_DISPLAY,
+        [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 10; @position = 8; ]
+        BACK_BUTTON_DISPLAY,
+        [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 11; @position = 8; ]
+        SAVING,
+        [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 12; @position = 8; ]
+        CONFIRM_DISCARD,
+        [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 13; @position = 8; ]
+        DISCARDING
+    }
+}
+[ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 17; ]
+class MenuItem{
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 17; ]
+    <init> {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 17; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 17; ]
+    function initialize() as Void {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 18; ]
+    enum {
+        [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 19; @position = 8; ]
+        NONE,
+        [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 20; @position = 8; ]
+        RECORD_STOP,
+        [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 21; @position = 8; ]
+        DISCARD
+    }
+}
+[ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 25; ]
+class ActivityParameter{
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 25; ]
+    <init> {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 25; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 25; ]
+    function initialize() as Void {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 26; ]
+    function setValue(value as Number or Null) {
+D_src_BrekiTrekker_source_ActivityData_mc_26_47_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 27 8 ]
+        %tmp.2 = lgetv %value;
+        putv self :currentValue %tmp.2;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 29 8 ]
+D_src_BrekiTrekker_source_ActivityData_mc_29_8_if_stmt:
+        %tmp.4 = getv ? :currentValue;
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @D_src_BrekiTrekker_source_ActivityData_mc_29_8_if_end;
+D_src_BrekiTrekker_source_ActivityData_mc_29_8_if_true:
+D_src_BrekiTrekker_source_ActivityData_mc_29_34_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 30 12 ]
+D_src_BrekiTrekker_source_ActivityData_mc_30_12_if_stmt:
+D_src_BrekiTrekker_source_ActivityData_mc_30_16_begin:
+        %tmp.8 = getv ? :minValue;
+        %tmp.9 = null;
+        %tmp.10 = eq %tmp.8 %tmp.9;
+        %tmp.11 = dup %tmp.10;
+        bt %tmp.11 @D_src_BrekiTrekker_source_ActivityData_mc_30_36_end;
+D_src_BrekiTrekker_source_ActivityData_mc_30_36_false:
+        %tmp.13 = getv ? :currentValue;
+        %tmp.14 = as %tmp.13 { (!Null) };
+        %tmp.16 = getv ? :minValue;
+        %tmp.17 = as %tmp.16 { (!Null) };
+        %tmp.18 = lt %tmp.14 %tmp.17;
+        %tmp.19 = or %tmp.10 %tmp.18;
+        push %tmp.19;
+D_src_BrekiTrekker_source_ActivityData_mc_30_36_end:
+        %tmp.20 = phi [%tmp.11 @D_src_BrekiTrekker_source_ActivityData_mc_30_16_begin] [%tmp.19 @D_src_BrekiTrekker_source_ActivityData_mc_30_36_false] [%tmp.20 @D_src_BrekiTrekker_source_ActivityData_mc_30_36_end];
+        bf %tmp.20 @D_src_BrekiTrekker_source_ActivityData_mc_30_12_if_end;
+D_src_BrekiTrekker_source_ActivityData_mc_30_12_if_true:
+D_src_BrekiTrekker_source_ActivityData_mc_30_61_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 31 16 ]
+        %tmp.22 = getv ? :currentValue;
+        %tmp.23 = as %tmp.22 { (!Null) };
+        putv self :minValue %tmp.23;
+D_src_BrekiTrekker_source_ActivityData_mc_30_61_stop:
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_30_12_if_end;
+D_src_BrekiTrekker_source_ActivityData_mc_30_12_if_end:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 33 12 ]
+D_src_BrekiTrekker_source_ActivityData_mc_33_12_if_stmt:
+D_src_BrekiTrekker_source_ActivityData_mc_33_16_begin:
+        %tmp.25 = getv ? :maxValue;
+        %tmp.26 = null;
+        %tmp.27 = eq %tmp.25 %tmp.26;
+        %tmp.28 = dup %tmp.27;
+        bt %tmp.28 @D_src_BrekiTrekker_source_ActivityData_mc_33_36_end;
+D_src_BrekiTrekker_source_ActivityData_mc_33_36_false:
+        %tmp.30 = getv ? :currentValue;
+        %tmp.31 = as %tmp.30 { (!Null) };
+        %tmp.33 = getv ? :maxValue;
+        %tmp.34 = as %tmp.33 { (!Null) };
+        %tmp.35 = gt %tmp.31 %tmp.34;
+        %tmp.36 = or %tmp.27 %tmp.35;
+        push %tmp.36;
+D_src_BrekiTrekker_source_ActivityData_mc_33_36_end:
+        %tmp.37 = phi [%tmp.28 @D_src_BrekiTrekker_source_ActivityData_mc_33_16_begin] [%tmp.36 @D_src_BrekiTrekker_source_ActivityData_mc_33_36_false] [%tmp.37 @D_src_BrekiTrekker_source_ActivityData_mc_33_36_end];
+        bf %tmp.37 @D_src_BrekiTrekker_source_ActivityData_mc_33_12_if_end;
+D_src_BrekiTrekker_source_ActivityData_mc_33_12_if_true:
+D_src_BrekiTrekker_source_ActivityData_mc_33_61_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 34 16 ]
+        %tmp.39 = getv ? :currentValue;
+        %tmp.40 = as %tmp.39 { (!Null) };
+        putv self :maxValue %tmp.40;
+D_src_BrekiTrekker_source_ActivityData_mc_33_61_stop:
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_33_12_if_end;
+D_src_BrekiTrekker_source_ActivityData_mc_33_12_if_end:
+D_src_BrekiTrekker_source_ActivityData_mc_29_34_stop:
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_29_8_if_end;
+D_src_BrekiTrekker_source_ActivityData_mc_29_8_if_end:
+D_src_BrekiTrekker_source_ActivityData_mc_26_47_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 39; ]
+    function minMaxDiff() as Number or Null {
+D_src_BrekiTrekker_source_ActivityData_mc_39_44_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 40 8 ]
+D_src_BrekiTrekker_source_ActivityData_mc_40_8_if_stmt:
+D_src_BrekiTrekker_source_ActivityData_mc_40_12_begin:
+        %tmp.2 = getv ? :minValue;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        %tmp.5 = dup %tmp.4;
+        bf %tmp.5 @D_src_BrekiTrekker_source_ActivityData_mc_40_32_end;
+D_src_BrekiTrekker_source_ActivityData_mc_40_32_true:
+        %tmp.7 = getv ? :maxValue;
+        %tmp.8 = null;
+        %tmp.9 = ne %tmp.7 %tmp.8;
+        %tmp.10 = and %tmp.4 %tmp.9;
+        push %tmp.10;
+D_src_BrekiTrekker_source_ActivityData_mc_40_32_end:
+        %tmp.11 = phi [%tmp.5 @D_src_BrekiTrekker_source_ActivityData_mc_40_12_begin] [%tmp.10 @D_src_BrekiTrekker_source_ActivityData_mc_40_32_true] [%tmp.11 @D_src_BrekiTrekker_source_ActivityData_mc_40_32_end];
+        bf %tmp.11 @D_src_BrekiTrekker_source_ActivityData_mc_40_8_if_false;
+D_src_BrekiTrekker_source_ActivityData_mc_40_8_if_true:
+D_src_BrekiTrekker_source_ActivityData_mc_40_50_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 41 12 ]
+        %tmp.13 = getv ? :maxValue;
+        %tmp.14 = as %tmp.13 { (!Null) };
+        %tmp.16 = getv ? :minValue;
+        %tmp.17 = as %tmp.16 { (!Null) };
+        %tmp.18 = sub %tmp.14 %tmp.17;
+        ret %tmp.18;
+D_src_BrekiTrekker_source_ActivityData_mc_40_50_stop:
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_40_8_if_end;
+D_src_BrekiTrekker_source_ActivityData_mc_40_8_if_false:
+D_src_BrekiTrekker_source_ActivityData_mc_43_13_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 44 12 ]
+        %tmp.19 = null;
+        ret %tmp.19;
+D_src_BrekiTrekker_source_ActivityData_mc_43_13_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_40_8_if_end:
+D_src_BrekiTrekker_source_ActivityData_mc_39_44_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 48; @position = 8; ]
+    var currentValue as Number or Null;
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 49; @position = 8; ]
+    var minValue as Number or Null;
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 50; @position = 8; ]
+    var maxValue as Number or Null;
+}
+[ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 53; ]
+class ActivityData{
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 53; ]
+    <init> {
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 208 8 ]
+        %tmp.21 = getv ? :AppState;
+        %tmp.22 = getv %tmp.21 :INITIAL;
+        putv self :state %tmp.22;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 210 8 ]
+        %tmp.26 = getv ? :ActivityParameter;
+        %tmp.23 = newc %tmp.26 ();
+        putv self :heartRate %tmp.23;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 211 8 ]
+        %tmp.30 = getv ? :ActivityParameter;
+        %tmp.27 = newc %tmp.30 ();
+        putv self :altitude %tmp.27;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 212 8 ]
+        %tmp.34 = getv ? :ActivityParameter;
+        %tmp.31 = newc %tmp.34 ();
+        putv self :temperature %tmp.31;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 215 8 ]
+        %tmp.36 = getv ? :MenuItem;
+        %tmp.37 = getv %tmp.36 :NONE;
+        putv self :selectedMenuItem %tmp.37;
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 53; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 53; ]
+    function initialize() as Void {
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 54; ]
+    function onSelectButton() {
+D_src_BrekiTrekker_source_ActivityData_mc_54_30_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 55 8 ]
+        %tmp.2 = getv ? :state;
+        push %tmp.2;
+D_src_BrekiTrekker_source_ActivityData_mc_55_8_switchCaseBegin:
+        %tmp.3 = dup %tmp.2;
+        %tmp.5 = getv ? :AppState;
+        %tmp.6 = getv %tmp.5 :INITIAL;
+        %tmp.7 = getv function %tmp.3 :equals;
+        %tmp.8 = invoke %tmp.3 %tmp.7 (%tmp.6);
+        bt %tmp.8 @D_src_BrekiTrekker_source_ActivityData_mc_56_12;
+        %tmp.9 = dup %tmp.2;
+        %tmp.11 = getv ? :AppState;
+        %tmp.12 = getv %tmp.11 :RUNNING;
+        %tmp.13 = getv function %tmp.9 :equals;
+        %tmp.14 = invoke %tmp.9 %tmp.13 (%tmp.12);
+        bt %tmp.14 @D_src_BrekiTrekker_source_ActivityData_mc_60_12;
+        %tmp.15 = dup %tmp.2;
+        %tmp.17 = getv ? :AppState;
+        %tmp.18 = getv %tmp.17 :BACK_BUTTON_DISPLAY;
+        %tmp.19 = getv function %tmp.15 :equals;
+        %tmp.20 = invoke %tmp.15 %tmp.19 (%tmp.18);
+        bt %tmp.20 @D_src_BrekiTrekker_source_ActivityData_mc_61_12;
+        %tmp.21 = dup %tmp.2;
+        %tmp.23 = getv ? :AppState;
+        %tmp.24 = getv %tmp.23 :MENU_DISPLAY;
+        %tmp.25 = getv function %tmp.21 :equals;
+        %tmp.26 = invoke %tmp.21 %tmp.25 (%tmp.24);
+        bt %tmp.26 @D_src_BrekiTrekker_source_ActivityData_mc_66_12;
+        %tmp.27 = dup %tmp.2;
+        %tmp.29 = getv ? :AppState;
+        %tmp.30 = getv %tmp.29 :CONFIRM_DISCARD;
+        %tmp.31 = getv function %tmp.27 :equals;
+        %tmp.32 = invoke %tmp.27 %tmp.31 (%tmp.30);
+        bt %tmp.32 @D_src_BrekiTrekker_source_ActivityData_mc_82_12;
+        %tmp.33 = dup %tmp.2;
+        %tmp.35 = getv ? :AppState;
+        %tmp.36 = getv %tmp.35 :SAVING;
+        %tmp.37 = getv function %tmp.33 :equals;
+        %tmp.38 = invoke %tmp.33 %tmp.37 (%tmp.36);
+        bt %tmp.38 @D_src_BrekiTrekker_source_ActivityData_mc_87_12;
+        %tmp.39 = dup %tmp.2;
+        %tmp.41 = getv ? :AppState;
+        %tmp.42 = getv %tmp.41 :DISCARDING;
+        %tmp.43 = getv function %tmp.39 :equals;
+        %tmp.44 = invoke %tmp.39 %tmp.43 (%tmp.42);
+        bt %tmp.44 @D_src_BrekiTrekker_source_ActivityData_mc_88_12;
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_55_8_defaultCodeBegin;
+D_src_BrekiTrekker_source_ActivityData_mc_56_12:
+D_src_BrekiTrekker_source_ActivityData_mc_56_35_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 57 16 ]
+        %tmp.45 = self;
+        %tmp.46 = getv function %tmp.45 :startActivity;
+        invoke %tmp.45 %tmp.46();
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 58 16 ]
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_55_8_switchCaseEnd;
+D_src_BrekiTrekker_source_ActivityData_mc_56_35_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_60_12:
+D_src_BrekiTrekker_source_ActivityData_mc_61_12:
+D_src_BrekiTrekker_source_ActivityData_mc_61_47_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 62 16 ]
+        %tmp.48 = getv ? :AppState;
+        %tmp.49 = getv %tmp.48 :MENU_DISPLAY;
+        putv self :state %tmp.49;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 63 16 ]
+        %tmp.51 = getv ? :MenuItem;
+        %tmp.52 = getv %tmp.51 :NONE;
+        putv self :selectedMenuItem %tmp.52;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 64 16 ]
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_55_8_switchCaseEnd;
+D_src_BrekiTrekker_source_ActivityData_mc_61_47_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_66_12:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 67 16 ]
+        %tmp.54 = getv ? :selectedMenuItem;
+        push %tmp.54;
+D_src_BrekiTrekker_source_ActivityData_mc_67_16_switchCaseBegin:
+        %tmp.55 = dup %tmp.54;
+        %tmp.57 = getv ? :MenuItem;
+        %tmp.58 = getv %tmp.57 :RECORD_STOP;
+        %tmp.59 = getv function %tmp.55 :equals;
+        %tmp.60 = invoke %tmp.55 %tmp.59 (%tmp.58);
+        bt %tmp.60 @D_src_BrekiTrekker_source_ActivityData_mc_68_20;
+        %tmp.61 = dup %tmp.54;
+        %tmp.63 = getv ? :MenuItem;
+        %tmp.64 = getv %tmp.63 :DISCARD;
+        %tmp.65 = getv function %tmp.61 :equals;
+        %tmp.66 = invoke %tmp.61 %tmp.65 (%tmp.64);
+        bt %tmp.66 @D_src_BrekiTrekker_source_ActivityData_mc_75_20;
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_67_16_defaultCodeBegin;
+D_src_BrekiTrekker_source_ActivityData_mc_68_20:
+D_src_BrekiTrekker_source_ActivityData_mc_68_47_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 69 24 ]
+        %tmp.68 = getv ? :AppState;
+        %tmp.69 = getv %tmp.68 :SAVING;
+        putv self :state %tmp.69;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 70 24 ]
+        %tmp.71 = getv ? :activitySession;
+        %tmp.72 = getv function %tmp.71 :stop;
+        invoke %tmp.71 %tmp.72();
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 71 24 ]
+        %tmp.74 = getv ? :activitySession;
+        %tmp.75 = getv function %tmp.74 :save;
+        invoke %tmp.74 %tmp.75();
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 72 24 ]
+        %tmp.76 = null;
+        putv self :activitySession %tmp.76;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 73 24 ]
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_67_16_switchCaseEnd;
+D_src_BrekiTrekker_source_ActivityData_mc_68_47_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_75_20:
+D_src_BrekiTrekker_source_ActivityData_mc_75_43_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 76 24 ]
+        %tmp.78 = getv ? :AppState;
+        %tmp.79 = getv %tmp.78 :CONFIRM_DISCARD;
+        putv self :state %tmp.79;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 77 24 ]
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_67_16_switchCaseEnd;
+D_src_BrekiTrekker_source_ActivityData_mc_75_43_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_67_16_defaultCodeBegin:
+D_src_BrekiTrekker_source_ActivityData_mc_67_16_switchCaseEnd:
+        pop;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 81 16 ]
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_55_8_switchCaseEnd;
+D_src_BrekiTrekker_source_ActivityData_mc_82_12:
+D_src_BrekiTrekker_source_ActivityData_mc_82_43_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 83 16 ]
+        %tmp.81 = getv ? :AppState;
+        %tmp.82 = getv %tmp.81 :DISCARDING;
+        putv self :state %tmp.82;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 84 16 ]
+        %tmp.84 = getv ? :activitySession;
+        %tmp.85 = getv function %tmp.84 :discard;
+        invoke %tmp.84 %tmp.85();
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 85 16 ]
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_55_8_switchCaseEnd;
+D_src_BrekiTrekker_source_ActivityData_mc_82_43_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_87_12:
+D_src_BrekiTrekker_source_ActivityData_mc_88_12:
+D_src_BrekiTrekker_source_ActivityData_mc_88_38_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 89 16 ]
+        %tmp.87 = getv ? :System;
+        %tmp.88 = getv function %tmp.87 :exit;
+        invoke %tmp.87 %tmp.88();
+D_src_BrekiTrekker_source_ActivityData_mc_88_38_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_55_8_defaultCodeBegin:
+D_src_BrekiTrekker_source_ActivityData_mc_55_8_switchCaseEnd:
+        pop;
+D_src_BrekiTrekker_source_ActivityData_mc_54_30_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 94; ]
+    function onBackButton() {
+D_src_BrekiTrekker_source_ActivityData_mc_94_28_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 95 8 ]
+        %tmp.2 = getv ? :state;
+        push %tmp.2;
+D_src_BrekiTrekker_source_ActivityData_mc_95_8_switchCaseBegin:
+        %tmp.3 = dup %tmp.2;
+        %tmp.5 = getv ? :AppState;
+        %tmp.6 = getv %tmp.5 :RUNNING;
+        %tmp.7 = getv function %tmp.3 :equals;
+        %tmp.8 = invoke %tmp.3 %tmp.7 (%tmp.6);
+        bt %tmp.8 @D_src_BrekiTrekker_source_ActivityData_mc_96_12;
+        %tmp.9 = dup %tmp.2;
+        %tmp.11 = getv ? :AppState;
+        %tmp.12 = getv %tmp.11 :MENU_DISPLAY;
+        %tmp.13 = getv function %tmp.9 :equals;
+        %tmp.14 = invoke %tmp.9 %tmp.13 (%tmp.12);
+        bt %tmp.14 @D_src_BrekiTrekker_source_ActivityData_mc_100_12;
+        %tmp.15 = dup %tmp.2;
+        %tmp.17 = getv ? :AppState;
+        %tmp.18 = getv %tmp.17 :BACK_BUTTON_DISPLAY;
+        %tmp.19 = getv function %tmp.15 :equals;
+        %tmp.20 = invoke %tmp.15 %tmp.19 (%tmp.18);
+        bt %tmp.20 @D_src_BrekiTrekker_source_ActivityData_mc_101_12;
+        %tmp.21 = dup %tmp.2;
+        %tmp.23 = getv ? :AppState;
+        %tmp.24 = getv %tmp.23 :CONFIRM_DISCARD;
+        %tmp.25 = getv function %tmp.21 :equals;
+        %tmp.26 = invoke %tmp.21 %tmp.25 (%tmp.24);
+        bt %tmp.26 @D_src_BrekiTrekker_source_ActivityData_mc_105_12;
+        %tmp.27 = dup %tmp.2;
+        %tmp.29 = getv ? :AppState;
+        %tmp.30 = getv %tmp.29 :SAVING;
+        %tmp.31 = getv function %tmp.27 :equals;
+        %tmp.32 = invoke %tmp.27 %tmp.31 (%tmp.30);
+        bt %tmp.32 @D_src_BrekiTrekker_source_ActivityData_mc_109_12;
+        %tmp.33 = dup %tmp.2;
+        %tmp.35 = getv ? :AppState;
+        %tmp.36 = getv %tmp.35 :DISCARDING;
+        %tmp.37 = getv function %tmp.33 :equals;
+        %tmp.38 = invoke %tmp.33 %tmp.37 (%tmp.36);
+        bt %tmp.38 @D_src_BrekiTrekker_source_ActivityData_mc_110_12;
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_95_8_defaultCodeBegin;
+D_src_BrekiTrekker_source_ActivityData_mc_96_12:
+D_src_BrekiTrekker_source_ActivityData_mc_96_35_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 97 16 ]
+        %tmp.40 = getv ? :AppState;
+        %tmp.41 = getv %tmp.40 :BACK_BUTTON_DISPLAY;
+        putv self :state %tmp.41;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 98 16 ]
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_95_8_switchCaseEnd;
+D_src_BrekiTrekker_source_ActivityData_mc_96_35_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_100_12:
+D_src_BrekiTrekker_source_ActivityData_mc_101_12:
+D_src_BrekiTrekker_source_ActivityData_mc_101_47_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 102 16 ]
+        %tmp.43 = getv ? :AppState;
+        %tmp.44 = getv %tmp.43 :RUNNING;
+        putv self :state %tmp.44;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 103 16 ]
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_95_8_switchCaseEnd;
+D_src_BrekiTrekker_source_ActivityData_mc_101_47_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_105_12:
+D_src_BrekiTrekker_source_ActivityData_mc_105_43_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 106 16 ]
+        %tmp.46 = getv ? :AppState;
+        %tmp.47 = getv %tmp.46 :RUNNING;
+        putv self :state %tmp.47;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 107 16 ]
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_95_8_switchCaseEnd;
+D_src_BrekiTrekker_source_ActivityData_mc_105_43_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_109_12:
+D_src_BrekiTrekker_source_ActivityData_mc_110_12:
+D_src_BrekiTrekker_source_ActivityData_mc_110_38_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 111 16 ]
+        %tmp.49 = getv ? :System;
+        %tmp.50 = getv function %tmp.49 :exit;
+        invoke %tmp.49 %tmp.50();
+D_src_BrekiTrekker_source_ActivityData_mc_110_38_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_95_8_defaultCodeBegin:
+D_src_BrekiTrekker_source_ActivityData_mc_95_8_switchCaseEnd:
+        pop;
+D_src_BrekiTrekker_source_ActivityData_mc_94_28_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 116; ]
+    function onNextPageButton() as Boolean {
+D_src_BrekiTrekker_source_ActivityData_mc_116_43_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 117 8 ]
+        %tmp.2 = getv ? :state;
+        push %tmp.2;
+D_src_BrekiTrekker_source_ActivityData_mc_117_8_switchCaseBegin:
+        %tmp.3 = dup %tmp.2;
+        %tmp.5 = getv ? :AppState;
+        %tmp.6 = getv %tmp.5 :MENU_DISPLAY;
+        %tmp.7 = getv function %tmp.3 :equals;
+        %tmp.8 = invoke %tmp.3 %tmp.7 (%tmp.6);
+        bt %tmp.8 @D_src_BrekiTrekker_source_ActivityData_mc_118_12;
+        %tmp.9 = dup %tmp.2;
+        %tmp.11 = getv ? :AppState;
+        %tmp.12 = getv %tmp.11 :SAVING;
+        %tmp.13 = getv function %tmp.9 :equals;
+        %tmp.14 = invoke %tmp.9 %tmp.13 (%tmp.12);
+        bt %tmp.14 @D_src_BrekiTrekker_source_ActivityData_mc_132_12;
+        %tmp.15 = dup %tmp.2;
+        %tmp.17 = getv ? :AppState;
+        %tmp.18 = getv %tmp.17 :DISCARDING;
+        %tmp.19 = getv function %tmp.15 :equals;
+        %tmp.20 = invoke %tmp.15 %tmp.19 (%tmp.18);
+        bt %tmp.20 @D_src_BrekiTrekker_source_ActivityData_mc_133_12;
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_117_8_defaultCodeBegin;
+D_src_BrekiTrekker_source_ActivityData_mc_118_12:
+D_src_BrekiTrekker_source_ActivityData_mc_118_40_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 119 16 ]
+        %tmp.22 = getv ? :selectedMenuItem;
+        push %tmp.22;
+D_src_BrekiTrekker_source_ActivityData_mc_119_16_switchCaseBegin:
+        %tmp.23 = dup %tmp.22;
+        %tmp.25 = getv ? :MenuItem;
+        %tmp.26 = getv %tmp.25 :RECORD_STOP;
+        %tmp.27 = getv function %tmp.23 :equals;
+        %tmp.28 = invoke %tmp.23 %tmp.27 (%tmp.26);
+        bt %tmp.28 @D_src_BrekiTrekker_source_ActivityData_mc_120_20;
+        %tmp.29 = dup %tmp.22;
+        %tmp.31 = getv ? :MenuItem;
+        %tmp.32 = getv %tmp.31 :DISCARD;
+        %tmp.33 = getv function %tmp.29 :equals;
+        %tmp.34 = invoke %tmp.29 %tmp.33 (%tmp.32);
+        bt %tmp.34 @D_src_BrekiTrekker_source_ActivityData_mc_124_20;
+        %tmp.35 = dup %tmp.22;
+        %tmp.37 = getv ? :MenuItem;
+        %tmp.38 = getv %tmp.37 :NONE;
+        %tmp.39 = getv function %tmp.35 :equals;
+        %tmp.40 = invoke %tmp.35 %tmp.39 (%tmp.38);
+        bt %tmp.40 @D_src_BrekiTrekker_source_ActivityData_mc_125_20;
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_119_16_defaultCodeBegin;
+D_src_BrekiTrekker_source_ActivityData_mc_120_20:
+D_src_BrekiTrekker_source_ActivityData_mc_120_47_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 121 24 ]
+        %tmp.42 = getv ? :MenuItem;
+        %tmp.43 = getv %tmp.42 :DISCARD;
+        putv self :selectedMenuItem %tmp.43;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 122 24 ]
+        %tmp.44 = true;
+        ret %tmp.44;
+D_src_BrekiTrekker_source_ActivityData_mc_120_47_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_124_20:
+D_src_BrekiTrekker_source_ActivityData_mc_125_20:
+D_src_BrekiTrekker_source_ActivityData_mc_125_40_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 126 24 ]
+        %tmp.46 = getv ? :MenuItem;
+        %tmp.47 = getv %tmp.46 :RECORD_STOP;
+        putv self :selectedMenuItem %tmp.47;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 127 24 ]
+        %tmp.48 = true;
+        ret %tmp.48;
+D_src_BrekiTrekker_source_ActivityData_mc_125_40_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_119_16_defaultCodeBegin:
+D_src_BrekiTrekker_source_ActivityData_mc_119_16_switchCaseEnd:
+        pop;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 130 16 ]
+        %tmp.49 = true;
+        ret %tmp.49;
+D_src_BrekiTrekker_source_ActivityData_mc_118_40_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_132_12:
+D_src_BrekiTrekker_source_ActivityData_mc_133_12:
+D_src_BrekiTrekker_source_ActivityData_mc_133_38_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 134 16 ]
+        %tmp.51 = getv ? :System;
+        %tmp.52 = getv function %tmp.51 :exit;
+        invoke %tmp.51 %tmp.52();
+D_src_BrekiTrekker_source_ActivityData_mc_133_38_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_136_12:
+D_src_BrekiTrekker_source_ActivityData_mc_117_8_defaultCodeBegin:
+D_src_BrekiTrekker_source_ActivityData_mc_136_21_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 137 16 ]
+        %tmp.53 = false;
+        ret %tmp.53;
+D_src_BrekiTrekker_source_ActivityData_mc_136_21_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_117_8_switchCaseEnd:
+        pop;
+D_src_BrekiTrekker_source_ActivityData_mc_116_43_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 142; ]
+    function onPreviousPageButton() as Boolean {
+D_src_BrekiTrekker_source_ActivityData_mc_142_47_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 143 8 ]
+        %tmp.2 = getv ? :state;
+        push %tmp.2;
+D_src_BrekiTrekker_source_ActivityData_mc_143_8_switchCaseBegin:
+        %tmp.3 = dup %tmp.2;
+        %tmp.5 = getv ? :AppState;
+        %tmp.6 = getv %tmp.5 :MENU_DISPLAY;
+        %tmp.7 = getv function %tmp.3 :equals;
+        %tmp.8 = invoke %tmp.3 %tmp.7 (%tmp.6);
+        bt %tmp.8 @D_src_BrekiTrekker_source_ActivityData_mc_144_12;
+        %tmp.9 = dup %tmp.2;
+        %tmp.11 = getv ? :AppState;
+        %tmp.12 = getv %tmp.11 :SAVING;
+        %tmp.13 = getv function %tmp.9 :equals;
+        %tmp.14 = invoke %tmp.9 %tmp.13 (%tmp.12);
+        bt %tmp.14 @D_src_BrekiTrekker_source_ActivityData_mc_158_12;
+        %tmp.15 = dup %tmp.2;
+        %tmp.17 = getv ? :AppState;
+        %tmp.18 = getv %tmp.17 :DISCARDING;
+        %tmp.19 = getv function %tmp.15 :equals;
+        %tmp.20 = invoke %tmp.15 %tmp.19 (%tmp.18);
+        bt %tmp.20 @D_src_BrekiTrekker_source_ActivityData_mc_159_12;
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_143_8_defaultCodeBegin;
+D_src_BrekiTrekker_source_ActivityData_mc_144_12:
+D_src_BrekiTrekker_source_ActivityData_mc_144_40_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 145 16 ]
+        %tmp.22 = getv ? :selectedMenuItem;
+        push %tmp.22;
+D_src_BrekiTrekker_source_ActivityData_mc_145_16_switchCaseBegin:
+        %tmp.23 = dup %tmp.22;
+        %tmp.25 = getv ? :MenuItem;
+        %tmp.26 = getv %tmp.25 :RECORD_STOP;
+        %tmp.27 = getv function %tmp.23 :equals;
+        %tmp.28 = invoke %tmp.23 %tmp.27 (%tmp.26);
+        bt %tmp.28 @D_src_BrekiTrekker_source_ActivityData_mc_146_20;
+        %tmp.29 = dup %tmp.22;
+        %tmp.31 = getv ? :MenuItem;
+        %tmp.32 = getv %tmp.31 :DISCARD;
+        %tmp.33 = getv function %tmp.29 :equals;
+        %tmp.34 = invoke %tmp.29 %tmp.33 (%tmp.32);
+        bt %tmp.34 @D_src_BrekiTrekker_source_ActivityData_mc_150_20;
+        %tmp.35 = dup %tmp.22;
+        %tmp.37 = getv ? :MenuItem;
+        %tmp.38 = getv %tmp.37 :NONE;
+        %tmp.39 = getv function %tmp.35 :equals;
+        %tmp.40 = invoke %tmp.35 %tmp.39 (%tmp.38);
+        bt %tmp.40 @D_src_BrekiTrekker_source_ActivityData_mc_151_20;
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_145_16_defaultCodeBegin;
+D_src_BrekiTrekker_source_ActivityData_mc_146_20:
+D_src_BrekiTrekker_source_ActivityData_mc_146_47_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 147 24 ]
+        %tmp.42 = getv ? :MenuItem;
+        %tmp.43 = getv %tmp.42 :DISCARD;
+        putv self :selectedMenuItem %tmp.43;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 148 24 ]
+        %tmp.44 = true;
+        ret %tmp.44;
+D_src_BrekiTrekker_source_ActivityData_mc_146_47_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_150_20:
+D_src_BrekiTrekker_source_ActivityData_mc_151_20:
+D_src_BrekiTrekker_source_ActivityData_mc_151_40_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 152 24 ]
+        %tmp.46 = getv ? :MenuItem;
+        %tmp.47 = getv %tmp.46 :RECORD_STOP;
+        putv self :selectedMenuItem %tmp.47;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 153 24 ]
+        %tmp.48 = true;
+        ret %tmp.48;
+D_src_BrekiTrekker_source_ActivityData_mc_151_40_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_145_16_defaultCodeBegin:
+D_src_BrekiTrekker_source_ActivityData_mc_145_16_switchCaseEnd:
+        pop;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 156 16 ]
+        %tmp.49 = true;
+        ret %tmp.49;
+D_src_BrekiTrekker_source_ActivityData_mc_144_40_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_158_12:
+D_src_BrekiTrekker_source_ActivityData_mc_159_12:
+D_src_BrekiTrekker_source_ActivityData_mc_159_38_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 160 16 ]
+        %tmp.51 = getv ? :System;
+        %tmp.52 = getv function %tmp.51 :exit;
+        invoke %tmp.51 %tmp.52();
+D_src_BrekiTrekker_source_ActivityData_mc_159_38_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_162_12:
+D_src_BrekiTrekker_source_ActivityData_mc_143_8_defaultCodeBegin:
+D_src_BrekiTrekker_source_ActivityData_mc_162_21_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 163 16 ]
+        %tmp.53 = false;
+        ret %tmp.53;
+D_src_BrekiTrekker_source_ActivityData_mc_162_21_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_143_8_switchCaseEnd:
+        pop;
+D_src_BrekiTrekker_source_ActivityData_mc_142_47_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 168; ]
+    function startActivity() {
+D_src_BrekiTrekker_source_ActivityData_mc_168_29_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 169 8 ]
+        %tmp.2 = getv ? :AppState;
+        %tmp.3 = getv %tmp.2 :RUNNING;
+        putv self :state %tmp.3;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 170 8 ]
+        %tmp.4 = getm $.Toybox.Time;
+        %tmp.5 = getv function %tmp.4 :now;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        putv self :startTime %tmp.6;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 171 8 ]
+        %tmp.7 = getm $.Toybox.ActivityRecording;
+        %tmp.8 = getv function %tmp.7 :createSession;
+        %tmp.9 = newd 2;
+        %tmp.11 = const :name;
+        %tmp.12 = "Walking";
+        %tmp.13 = dup %tmp.9;
+        %tmp.14 = aputv %tmp.13 %tmp.11 %tmp.12;
+        %tmp.16 = const :sport;
+        %tmp.18 = getv ? :Activity;
+        %tmp.19 = getv %tmp.18 :SPORT_WALKING;
+        %tmp.20 = dup %tmp.14;
+        %tmp.21 = aputv %tmp.20 %tmp.16 %tmp.19;
+        %tmp.22 = invoke %tmp.7 %tmp.8(%tmp.21);
+        putv self :activitySession %tmp.22;
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 176 8 ]
+        %tmp.24 = getv ? :activitySession;
+        %tmp.25 = getv function %tmp.24 :start;
+        invoke %tmp.24 %tmp.25();
+D_src_BrekiTrekker_source_ActivityData_mc_168_29_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 179; ]
+    function activityDuration() as Duration or Null {
+D_src_BrekiTrekker_source_ActivityData_mc_179_52_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 180 8 ]
+D_src_BrekiTrekker_source_ActivityData_mc_180_8_if_stmt:
+        %tmp.2 = getv ? :startTime;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @D_src_BrekiTrekker_source_ActivityData_mc_180_8_if_false;
+D_src_BrekiTrekker_source_ActivityData_mc_180_8_if_true:
+D_src_BrekiTrekker_source_ActivityData_mc_180_31_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 181 12 ]
+        %tmp.5 = getm $.Toybox.Time;
+        %tmp.6 = getv function %tmp.5 :now;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        %tmp.8 = getv function %tmp.7 :subtract;
+        %tmp.10 = getv ? :startTime;
+        %tmp.11 = invoke %tmp.7 %tmp.8(%tmp.10);
+        ret %tmp.11;
+D_src_BrekiTrekker_source_ActivityData_mc_180_31_stop:
+        goto @D_src_BrekiTrekker_source_ActivityData_mc_180_8_if_end;
+D_src_BrekiTrekker_source_ActivityData_mc_180_8_if_false:
+D_src_BrekiTrekker_source_ActivityData_mc_183_13_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 184 12 ]
+        %tmp.12 = null;
+        ret %tmp.12;
+D_src_BrekiTrekker_source_ActivityData_mc_183_13_stop:
+D_src_BrekiTrekker_source_ActivityData_mc_180_8_if_end:
+D_src_BrekiTrekker_source_ActivityData_mc_179_52_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 188; ]
+    function setHeartRate(value as Number or Null) {
+D_src_BrekiTrekker_source_ActivityData_mc_188_51_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 189 8 ]
+        %tmp.2 = getv ? :heartRate;
+        %tmp.3 = getv function %tmp.2 :setValue;
+        %tmp.5 = lgetv %value;
+        invoke %tmp.2 %tmp.3(%tmp.5);
+D_src_BrekiTrekker_source_ActivityData_mc_188_51_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 192; ]
+    function setAltitude(value as Number or Null) {
+D_src_BrekiTrekker_source_ActivityData_mc_192_50_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 193 8 ]
+        %tmp.2 = getv ? :altitude;
+        %tmp.3 = getv function %tmp.2 :setValue;
+        %tmp.5 = lgetv %value;
+        invoke %tmp.2 %tmp.3(%tmp.5);
+D_src_BrekiTrekker_source_ActivityData_mc_192_50_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 196; ]
+    function ascent() as Number or Null {
+D_src_BrekiTrekker_source_ActivityData_mc_196_40_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 197 8 ]
+        %tmp.2 = getv ? :altitude;
+        %tmp.3 = getv function %tmp.2 :minMaxDiff;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        ret %tmp.4;
+D_src_BrekiTrekker_source_ActivityData_mc_196_40_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 200; ]
+    function setTemperature(value as Number or Null) {
+D_src_BrekiTrekker_source_ActivityData_mc_200_53_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 201 8 ]
+        %tmp.2 = getv ? :temperature;
+        %tmp.3 = getv function %tmp.2 :setValue;
+        %tmp.5 = lgetv %value;
+        invoke %tmp.2 %tmp.3(%tmp.5);
+D_src_BrekiTrekker_source_ActivityData_mc_200_53_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 204; ]
+    static
+    function initial() as ActivityData {
+D_src_BrekiTrekker_source_ActivityData_mc_204_46_start:
+[ "D:\src\BrekiTrekker\source\ActivityData.mc" 205 8 ]
+        %tmp.4 = getv ? :ActivityData;
+        %tmp.1 = newc %tmp.4 ();
+        ret %tmp.1;
+D_src_BrekiTrekker_source_ActivityData_mc_204_46_stop:
+    }
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 208; @position = 8; ]
+    var state;
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 209; @position = 8; ]
+    var startTime as Moment or Null;
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 210; @position = 8; ]
+    var heartRate;
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 211; @position = 8; ]
+    var altitude;
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 212; @position = 8; ]
+    var temperature;
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 213; @position = 8; ]
+    var batteryLevel as Number or Null;
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 214; @position = 8; ]
+    var activitySession as Session or Null;
+    [ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 215; @position = 8; ]
+    var selectedMenuItem;
+}
+[ @file = "D:\src\BrekiTrekker\source\ActivityData.mc"; @line = 1; ]
+<init> {
+}
