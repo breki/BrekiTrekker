@@ -1,5 +1,6 @@
 import Toybox.Lang;
 import Toybox.Time;
+import Toybox.Activity;
 import Toybox.ActivityRecording;
 
 class AppState { 
@@ -20,6 +21,19 @@ class MenuItem {
         RECORD_STOP,
         DISCARD
     }
+}
+
+class ActivityType {
+    public function initialize(
+        pNameShort as String, pNameLong as String, pSport as Activity.Sport) {
+        nameShort = pNameShort;
+        nameLong = pNameLong;
+        sport = pSport;
+    }
+
+    var nameShort as String;
+    var nameLong as String;
+    var sport as Activity.Sport;
 }
 
 class ActivityParameter {
@@ -169,8 +183,8 @@ class ActivityData {
         state = AppState.RUNNING;
         startTime = Time.now(); //.add(new Duration(-6444));
         activitySession = ActivityRecording.createSession({
-            :name => "Walking",
-            :sport => Activity.SPORT_WALKING,
+            :name => activityType.nameLong,
+            :sport => activityType.sport,
             // :sensorLogger => 
         });
         activitySession.start();
@@ -206,6 +220,8 @@ class ActivityData {
     }
 
     var state = AppState.INITIAL;
+    var activityType = new ActivityType(
+        "WALK", "Walking", Activity.SPORT_WALKING);
     var startTime as Moment or Null;
     var heartRate = new ActivityParameter();
     var altitude = new ActivityParameter();
