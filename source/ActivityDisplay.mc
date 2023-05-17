@@ -50,11 +50,13 @@ class ActivityDisplay extends WatchUi.Drawable {
         var justification = 
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
 
-        var activitiesCount = _activityData.activityTypes.size();
+        var activityTypes = _activityData.activityTypes as Array<ActivityType>;
+        var activitiesCount = activityTypes.size();
         var startingY = centerY - (activitiesCount - 1) * 30 / 2;
 
         for (var i = 0; i < activitiesCount; i++) {
-            var activityType = _activityData.activityTypes[i];
+
+            var activityType = activityTypes[i];
             var text = "            " + activityType.nameShort + " ->            ";
 
             if (i == _activityData.selectedActivityTypeIndex) {

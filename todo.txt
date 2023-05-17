@@ -1,10 +1,10 @@
-- provide a way to switch the activity type
 - back button on START screen should exit the app
 
 - indicate when the GPS is ready
 	- can we handle "GPS is ready" event?
 	- show GPS icon
 
+- better calculation of the ascent
 
 - icon for the app
 
