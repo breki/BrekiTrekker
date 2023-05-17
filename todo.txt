@@ -2,7 +2,7 @@
 	- can we handle "GPS is ready" event?
 	- show GPS icon
 
-- better calculation of the ascent
+- show elevation on the start screen to remind the user to calibrate the altimeter
 
 - icon for the app
 
@@ -18,4 +18,5 @@
     (https://developer.garmin.com/connect-iq/core-topics/application-and-system-modules/)
 - use key handlers to handle the buttons so we can implement short/long presses
 - what to do with up, down buttons?
-- how to switch activity type?
+
+- detect when you're near the starting point and vibrate

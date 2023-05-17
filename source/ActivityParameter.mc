@@ -23,6 +23,15 @@ class ActivityParameter {
         }
     }
 
+    function minCurrentDiff() as Number or Null {
+        if (minValue != null && currentValue != null) {
+            return currentValue - minValue;
+        }
+        else {
+            return null;
+        }
+    }
+
     var currentValue as Number or Null;
     var minValue as Number or Null;
     var maxValue as Number or Null;

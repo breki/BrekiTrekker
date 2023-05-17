@@ -177,10 +177,19 @@ class ActivityDisplay extends WatchUi.Drawable {
     }
 
     function _drawAltitude(dc as Dc) as Void {
-        var altText = Lang.format("$1$m", 
-            [_activityData.altitude.currentValue.format("%d")]);
-        var ascendText = Lang.format("+$1$m", 
-            [_activityData.ascent().format("%d")]);
+        var altText;
+        var ascendText;
+
+        if (_activityData.gpsAltitude.currentValue != null) { 
+            altText = Lang.format("$1$m", 
+                [_activityData.gpsAltitude.currentValue.format("%d")]);
+            ascendText = Lang.format("+$1$m", 
+                [_activityData.gpsAscent().format("%d")]);
+        }
+        else {
+            altText = "---m";
+            ascendText = "+---m";
+        }
 
         var xPos = 70;
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);

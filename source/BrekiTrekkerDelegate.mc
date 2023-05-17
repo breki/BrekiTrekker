@@ -28,12 +28,12 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onPosition(info as Position.Info) as Void {
-        System.println("onPosition");
+        activityData.setGpsAltitude(info.altitude);
     }
 
     function onSensor(info as Sensor.Info) as Void {
         activityData.setHeartRate(info.heartRate);
-        activityData.setAltitude(info.altitude);
+        activityData.setBarometricAltitude(info.altitude);
         activityData.setTemperature(info.temperature);
     }
 

@@ -163,12 +163,20 @@ class ActivityData {
         heartRate.setValue(value);
     }
 
-    function setAltitude(value as Number or Null) {
-        altitude.setValue(value);
+    function setBarometricAltitude(value as Number or Null) {
+        barometricAltitude.setValue(value);
     }
 
-    function ascent() as Number or Null {
-        return altitude.minMaxDiff();
+    function setGpsAltitude(value as Number or Null) {
+        gpsAltitude.setValue(value);
+    }
+
+    function barometricAscent() as Number or Null {
+        return barometricAltitude.minCurrentDiff();
+    }
+
+    function gpsAscent() as Number or Null {
+        return gpsAltitude.minCurrentDiff();
     }
 
     function setTemperature(value as Number or Null) {
@@ -188,7 +196,8 @@ class ActivityData {
     var selectedActivityTypeIndex = 0;
     var startTime as Moment or Null;
     var heartRate = new ActivityParameter();
-    var altitude = new ActivityParameter();
+    var barometricAltitude = new ActivityParameter();
+    var gpsAltitude = new ActivityParameter();
     var temperature = new ActivityParameter();
     var batteryLevel as Number or Null;
     var activitySession as Session or Null;
