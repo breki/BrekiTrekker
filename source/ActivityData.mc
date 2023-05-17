@@ -3,67 +3,6 @@ import Toybox.Time;
 import Toybox.Activity;
 import Toybox.ActivityRecording;
 
-class AppState { 
-    enum {
-        INITIAL,
-        RUNNING,
-        MENU_DISPLAY,
-        BACK_BUTTON_DISPLAY,
-        SAVING,
-        CONFIRM_DISCARD,
-        DISCARDING
-    }
-}
-
-class MenuItem {
-    enum {
-        NONE,
-        RECORD_STOP,
-        DISCARD
-    }
-}
-
-class ActivityType {
-    public function initialize(
-        nameShort as String, nameLong as String, sport as Activity.Sport) {
-        self.nameShort = nameShort;
-        self.nameLong = nameLong;
-        self.sport = sport;
-    }
-
-    var nameShort as String;
-    var nameLong as String;
-    var sport as Activity.Sport;
-}
-
-class ActivityParameter {
-    function setValue(value as Number or Null) {
-        currentValue = value;
-
-        if (currentValue != null) {
-            if (minValue == null || currentValue < minValue) {
-                minValue = currentValue;
-            }
-            if (maxValue == null || currentValue > maxValue) {
-                maxValue = currentValue;
-            }
-        }
-    }
-
-    function minMaxDiff() as Number or Null {
-        if (minValue != null && maxValue != null) {
-            return maxValue - minValue;
-        }
-        else {
-            return null;
-        }
-    }
-
-    var currentValue as Number or Null;
-    var minValue as Number or Null;
-    var maxValue as Number or Null;
-}
-
 class ActivityData {
     function activityType() as ActivityType {
         return activityTypes[selectedActivityTypeIndex];
