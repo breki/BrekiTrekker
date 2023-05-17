@@ -1,6 +1,3 @@
-- move classes to their own files 
-- back button on START screen should exit the app
-
 - indicate when the GPS is ready
 	- can we handle "GPS is ready" event?
 	- show GPS icon

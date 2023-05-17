@@ -50,6 +50,9 @@ class ActivityData {
 
     function onBackButton() {
         switch (state) {
+            case AppState.INITIAL: {
+                System.exit();                
+            }
             case AppState.RUNNING: {
                 state = AppState.BACK_BUTTON_DISPLAY;
                 break;
