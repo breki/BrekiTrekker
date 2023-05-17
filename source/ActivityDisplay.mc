@@ -46,14 +46,26 @@ class ActivityDisplay extends WatchUi.Drawable {
     }
 
     function _drawStartupScreen(dc as Dc) as Void {
-        var timerText = "START";
-
         var font = Graphics.FONT_MEDIUM;
         var justification = 
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
 
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX, centerY, font, timerText, justification);
+        var activitiesCount = _activityData.activityTypes.size();
+        var startingY = centerY - (activitiesCount - 1) * 30 / 2;
+
+        for (var i = 0; i < activitiesCount; i++) {
+            var activityType = _activityData.activityTypes[i];
+            var text = "            " + activityType.nameShort + " ->            ";
+
+            if (i == _activityData.selectedActivityTypeIndex) {
+                dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_ORANGE);
+            }
+            else {
+                dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_TRANSPARENT);
+            }
+            // dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(centerX, startingY + i * 30, font, text, justification);
+        }
     }
 
     function _drawActivityScreen(dc as Dc) as Void {

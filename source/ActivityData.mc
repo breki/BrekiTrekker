@@ -25,10 +25,10 @@ class MenuItem {
 
 class ActivityType {
     public function initialize(
-        pNameShort as String, pNameLong as String, pSport as Activity.Sport) {
-        nameShort = pNameShort;
-        nameLong = pNameLong;
-        sport = pSport;
+        nameShort as String, nameLong as String, sport as Activity.Sport) {
+        self.nameShort = nameShort;
+        self.nameLong = nameLong;
+        self.sport = sport;
     }
 
     var nameShort as String;
@@ -65,6 +65,10 @@ class ActivityParameter {
 }
 
 class ActivityData {
+    function activityType() as ActivityType {
+        return activityTypes[selectedActivityTypeIndex];
+    }
+
     function onSelectButton() {
         switch (state) {
             case AppState.INITIAL: {
@@ -129,6 +133,11 @@ class ActivityData {
 
     function onNextPageButton() as Boolean {
         switch (state) {
+            case AppState.INITIAL: {
+                selectedActivityTypeIndex = 
+                    (selectedActivityTypeIndex + 1) % activityTypes.size();
+                return true;
+            }
             case AppState.MENU_DISPLAY: {
                 switch (selectedMenuItem) {
                     case MenuItem.RECORD_STOP: {
@@ -155,6 +164,13 @@ class ActivityData {
 
     function onPreviousPageButton() as Boolean {
         switch (state) {
+            case AppState.INITIAL: {
+                selectedActivityTypeIndex = selectedActivityTypeIndex - 1;
+                if (selectedActivityTypeIndex < 0) {
+                    selectedActivityTypeIndex = activityTypes.size() - 1;
+                }
+                return true;
+            }
             case AppState.MENU_DISPLAY: {
                 switch (selectedMenuItem) {
                     case MenuItem.RECORD_STOP: {
@@ -182,6 +198,8 @@ class ActivityData {
     function startActivity() {
         state = AppState.RUNNING;
         startTime = Time.now(); //.add(new Duration(-6444));
+
+        var activityType = self.activityType();
         activitySession = ActivityRecording.createSession({
             :name => activityType.nameLong,
             :sport => activityType.sport,
@@ -220,8 +238,12 @@ class ActivityData {
     }
 
     var state = AppState.INITIAL;
-    var activityType = new ActivityType(
-        "WALK", "Walking", Activity.SPORT_WALKING);
+    var activityTypes as Array<ActivityType> = [
+            new ActivityType("WALK", "Walking", Activity.SPORT_WALKING),
+            new ActivityType("HIKE", "Hiking", Activity.SPORT_HIKING),
+            new ActivityType("RUN", "Running", Activity.SPORT_RUNNING)
+        ];
+    var selectedActivityTypeIndex = 0;
     var startTime as Moment or Null;
     var heartRate = new ActivityParameter();
     var altitude = new ActivityParameter();
