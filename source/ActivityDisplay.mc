@@ -180,11 +180,11 @@ class ActivityDisplay extends WatchUi.Drawable {
         var altText;
         var ascendText;
 
-        if (_activityData.gpsAltitude.currentValue != null) { 
+        if (_activityData.barometricAltitude.currentValue != null) { 
             altText = Lang.format("$1$m", 
-                [_activityData.gpsAltitude.currentValue.format("%d")]);
+                [_activityData.barometricAltitude.currentValue.format("%d")]);
             ascendText = Lang.format("+$1$m", 
-                [_activityData.gpsAscent().format("%d")]);
+                [_activityData.barometricAscent().format("%d")]);
         }
         else {
             altText = "---m";

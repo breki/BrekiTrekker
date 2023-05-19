@@ -1,3 +1,5 @@
+- better calculation of ascent: keep the maximum minCurrent
+
 - indicate when the GPS is ready
 	- can we handle "GPS is ready" event?
 	- show GPS icon
