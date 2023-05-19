@@ -17,6 +17,10 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
         Sensor.setEnabledSensors(
             [Sensor.SENSOR_HEARTRATE, Sensor.SENSOR_TEMPERATURE]);
         Sensor.enableSensorEvents(method(:onSensor));
+
+        activityTimer = new Timer.Timer();
+        var repeat = true; // the Timer will repeat until stop() is called
+        activityTimer.start(method(:_updateActivityView), 1000, repeat);
     }
 
     function onMenu() as Boolean {
@@ -39,27 +43,11 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
 
     // on the SELECT button press
     function onSelect() as Boolean {
-        System.println("onSelect");
-
-        var stateBefore = activityData.state;
-
         activityData.onSelectButton();
-
-        var stateAfter = activityData.state;
-
-        if (stateBefore == AppState.INITIAL && stateAfter == AppState.RUNNING) {
-            activityTimer = new Timer.Timer();
-            var repeat = true; // the Timer will repeat until stop() is called
-            activityTimer.start(method(:_updateActivityView), 1000, repeat);
-        }
-        
-        _updateActivityView();
-
         return true;
     }
 
     function onBack() as Boolean {
-        System.println("onBack");
         activityData.onBackButton();
 
         _updateActivityView();
@@ -68,8 +56,6 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onNextPage() as Boolean {
-        System.println("onNextPage");
-
         var refreshDisplay = activityData.onNextPageButton();
         if (refreshDisplay) {
             _updateActivityView();
@@ -79,7 +65,6 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onPreviousPage() as Boolean {
-        System.println("onPreviousPage");
         var refreshDisplay = activityData.onPreviousPageButton();
         if (refreshDisplay) {
             _updateActivityView();

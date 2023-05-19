@@ -1,10 +1,10 @@
-- show elevation on the start screen to remind the user to calibrate the altimeter
-
 - indicate when the GPS is ready
 	- can we handle "GPS is ready" event?
 	- show GPS icon
 
 - icon for the app
+
+- can we calibrate the altitude?
 
 - display distance
     - how to calculate it?

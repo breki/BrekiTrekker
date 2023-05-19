@@ -68,6 +68,16 @@ class ActivityDisplay extends WatchUi.Drawable {
             // dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
             dc.drawText(centerX, startingY + i * 30, font, text, justification);
         }
+
+        if (_activityData.barometricAltitude.currentValue != null) {
+            dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
+
+            var altText = Lang.format("$1$m", 
+                [_activityData.barometricAltitude.currentValue.format("%d")]);
+
+            dc.drawText(centerX, startingY + (activitiesCount + 1) * 30, 
+                Graphics.FONT_TINY, altText, justification); 
+        }
     }
 
     function _drawActivityScreen(dc as Dc) as Void {
