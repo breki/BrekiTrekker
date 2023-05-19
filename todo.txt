@@ -1,10 +1,8 @@
-- better calculation of ascent: keep the maximum minCurrent
+- show elevation on the start screen to remind the user to calibrate the altimeter
 
 - indicate when the GPS is ready
 	- can we handle "GPS is ready" event?
 	- show GPS icon
-
-- show elevation on the start screen to remind the user to calibrate the altimeter
 
 - icon for the app
 

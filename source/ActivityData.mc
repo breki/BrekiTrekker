@@ -172,11 +172,11 @@ class ActivityData {
     }
 
     function barometricAscent() as Number or Null {
-        return barometricAltitude.minCurrentDiff();
+        return barometricAltitude.maxMinCurrentDiff;
     }
 
     function gpsAscent() as Number or Null {
-        return gpsAltitude.minCurrentDiff();
+        return gpsAltitude.maxMinCurrentDiff;
     }
 
     function setTemperature(value as Number or Null) {

@@ -11,6 +11,12 @@ class ActivityParameter {
             if (maxValue == null || currentValue > maxValue) {
                 maxValue = currentValue;
             }
+
+            var x = minCurrentDiff();
+            if (x != null 
+                && (maxMinCurrentDiff == null || x > maxMinCurrentDiff)) {
+                maxMinCurrentDiff = x;
+            }
         }
     }
 
@@ -35,4 +41,5 @@ class ActivityParameter {
     var currentValue as Number or Null;
     var minValue as Number or Null;
     var maxValue as Number or Null;
+    var maxMinCurrentDiff as Number or Null;
 }
