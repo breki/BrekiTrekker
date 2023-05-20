@@ -1,3 +1,9 @@
+- display distance
+    - how to calculate it?
+        - use elapsedDistance 
+
+- use elapsedTime instead of using a custom timer
+
 - indicate when the GPS is ready
 	- can we handle "GPS is ready" event?
 	- show GPS icon
@@ -6,8 +12,6 @@
 
 - can we calibrate the altitude?
 
-- display distance
-    - how to calculate it?
 
 - display the next sunset/sunrise time
 
