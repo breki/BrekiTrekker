@@ -5,7 +5,7 @@ import Toybox.System;
 import Toybox.Time;
 import Toybox.Timer;
 import Toybox.WatchUi;
-import Toybox.Activity;
+using Toybox.Activity as Activity;
 
 class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
 
@@ -78,8 +78,7 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
         var systemStats = System.getSystemStats();
         activityData.batteryLevel = systemStats.battery;
 
-        var x = new Activity.Info();
-        var activityInfo = x.getActivityInfo();
+        var activityInfo = Activity.getActivityInfo();
         activityData.elapsedDistance = activityInfo.elapsedDistance;
 
         activityView.updateView(activityData);

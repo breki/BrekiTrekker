@@ -7,3 +7,5 @@ screen.
 ## Changelog
 
 ### 2023-05-20
+
+- Elapsed distance indicator

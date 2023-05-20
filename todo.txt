@@ -1,6 +1,5 @@
-- display distance
-    - how to calculate it?
-        - use elapsedDistance 
+- can we use totalAscent instead of calculating it ourselves?
+    - also maxHeartRate
 
 - use elapsedTime instead of using a custom timer
 
@@ -11,7 +10,6 @@
 - icon for the app
 
 - can we calibrate the altitude?
-
 
 - display the next sunset/sunrise time
 

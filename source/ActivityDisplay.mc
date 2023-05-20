@@ -85,6 +85,7 @@ class ActivityDisplay extends WatchUi.Drawable {
         _drawTimer(dc);
         _drawHeartRate(dc);
         _drawAltitude(dc);
+        _drawElapsedDistance(dc);    
         _drawTemperature(dc);
         _drawBatteryLevel(dc);
 
@@ -208,6 +209,17 @@ class ActivityDisplay extends WatchUi.Drawable {
         dc.setColor(Graphics.COLOR_PINK, Graphics.COLOR_TRANSPARENT);
         dc.drawText(xPos, centerY - 20, Graphics.FONT_XTINY, ascendText, 
             Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+    }
+
+    function _drawElapsedDistance(dc as Dc) as Void {
+        if (_activityData.elapsedDistance != null) {
+            var distanceText = Lang.format("$1$m", 
+                [_activityData.elapsedDistance.format("%.0f")]);
+
+            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(centerX, centerY - 40, Graphics.FONT_XTINY, distanceText, 
+                Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        }
     }
 
     function _drawTemperature(dc as Dc) as Void {
