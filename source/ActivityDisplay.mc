@@ -106,6 +106,7 @@ class ActivityDisplay extends WatchUi.Drawable {
         }
     }
 
+    // Draw the current time on the display.
     function _drawTime(dc as Dc) as Void {
         var now = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
 
@@ -116,7 +117,7 @@ class ActivityDisplay extends WatchUi.Drawable {
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
 
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX, 10, Graphics.FONT_TINY, timeText, hvCenter);
+        dc.drawText(centerX, 15, Graphics.FONT_MEDIUM, timeText, hvCenter);
     }
 
     function _drawTimer(dc as Dc) as Void {

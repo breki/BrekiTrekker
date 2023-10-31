@@ -1,3 +1,7 @@
+- bigger text for the time display
+
+- stop any battery-hungry activity once the activity has been saved
+
 - add license file
 
 - should we use maxHeartRate from ActivityInfo?
