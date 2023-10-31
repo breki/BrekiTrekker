@@ -80,6 +80,7 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
 
         var activityInfo = Activity.getActivityInfo();
         activityData.elapsedDistance = activityInfo.elapsedDistance;
+        activityData.totalAscent = activityInfo.totalAscent;
 
         activityView.updateView(activityData);
     }

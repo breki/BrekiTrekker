@@ -189,17 +189,25 @@ class ActivityDisplay extends WatchUi.Drawable {
 
     function _drawAltitude(dc as Dc) as Void {
         var altText;
-        var ascendText;
+        var ascentText;
 
         if (_activityData.barometricAltitude.currentValue != null) { 
             altText = Lang.format("$1$m", 
                 [_activityData.barometricAltitude.currentValue.format("%d")]);
-            ascendText = Lang.format("+$1$m", 
-                [_activityData.barometricAscent().format("%d")]);
+            // ascentText = Lang.format("+$1$m", 
+            //     [_activityData.barometricAscent().format("%d")]);
         }
         else {
             altText = "---m";
-            ascendText = "+---m";
+            // ascentText = "+---m";
+        }
+
+        if (_activityData.totalAscent != null) {
+            ascentText = Lang.format("+$1$m", 
+                [_activityData.totalAscent.format("%d")]);
+        }
+        else {
+            ascentText = "+---m";
         }
 
         var xPos = 70;
@@ -207,7 +215,7 @@ class ActivityDisplay extends WatchUi.Drawable {
         dc.drawText(xPos, centerY, Graphics.FONT_XTINY, altText, 
             Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
         dc.setColor(Graphics.COLOR_PINK, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(xPos, centerY - 20, Graphics.FONT_XTINY, ascendText, 
+        dc.drawText(xPos, centerY - 20, Graphics.FONT_XTINY, ascentText, 
             Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 

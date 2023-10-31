@@ -9,3 +9,4 @@ screen.
 ### 2023-05-20
 
 - Elapsed distance indicator
+- Ascent is no longer calculated, but instead taken from the watch itself

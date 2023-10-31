@@ -1,5 +1,10 @@
-- can we use totalAscent instead of calculating it ourselves?
-    - also maxHeartRate
+- add license file
+
+- should we use maxHeartRate from ActivityInfo?
+
+- ascent is not correctly calculated, for some reason (start at +10 right at the start) 
+    - that's because we start recording the altitude at the initial screen and 
+        I calibrated the altitude after that
 
 - use elapsedTime instead of using a custom timer
 
@@ -12,6 +17,10 @@
 - can we calibrate the altitude?
 
 - display the next sunset/sunrise time
+    - it either has to be calculated or fetched from the internet
+    - https://github.com/HanSolo/digital5/blob/5394a5db603e696957f9d0667c1e37e6d3fe1001/source/SunriseSunset.mc#L14
+    - https://github.com/search?q=sunrise+path%3A*.mc&type=code
+    - https://forums.garmin.com/developer/connect-iq/f/discussion/3078/sun-rise-sunset
 
 - show info about when the battery will run out
 

@@ -199,6 +199,7 @@ class ActivityData {
     var heartRate = new ActivityParameter();
     var barometricAltitude = new ActivityParameter();
     var gpsAltitude = new ActivityParameter();
+    var totalAscent as Number or Null;
     var temperature = new ActivityParameter();
     var batteryLevel as Number or Null;
     var activitySession as Session or Null;
