@@ -1,4 +1,4 @@
-- bigger text for the time display
+- temperature text color should be white
 
 - stop any battery-hungry activity once the activity has been saved
 

@@ -231,6 +231,7 @@ class ActivityDisplay extends WatchUi.Drawable {
         }
     }
 
+    // Display the current temperature on the display.
     function _drawTemperature(dc as Dc) as Void {
 
         var temperatureText;
@@ -243,7 +244,7 @@ class ActivityDisplay extends WatchUi.Drawable {
         }
 
         var xPos = 70;
-        dc.setColor(Graphics.COLOR_DK_GREEN, Graphics.COLOR_TRANSPARENT);
+        dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(xPos, centerY + 20, Graphics.FONT_XTINY, temperatureText, 
             Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
     }

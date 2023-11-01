@@ -24,6 +24,10 @@ the data simulation.
 
 ## Changelog
 
+### 2023-11-01
+
+- Use a more prominent color for temperature.
+
 ### 2023-10-31
 
 - Use a more prominent font for the time display.
