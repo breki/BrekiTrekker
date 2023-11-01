@@ -1,7 +1,9 @@
-import Toybox.Lang;
-import Toybox.Time;
 import Toybox.Activity;
 import Toybox.ActivityRecording;
+import Toybox.Attention;
+import Toybox.Lang;
+import Toybox.Time;
+import Toybox.Timer;
 
 class ActivityData {
     function activityType() as ActivityType {
@@ -27,6 +29,11 @@ class ActivityData {
                         activitySession.stop();
                         activitySession.save();
                         activitySession = null;
+                        // todo 0: create a reminder timer
+                        savedReminderTimer = new Timer.Timer();
+                        var repeat = true; // the Timer will repeat until stop() is called
+                        savedReminderTimer.start(
+                            method(:_doReminderSignal), 10000, repeat);
                         break;
                     }
                     case MenuItem.DISCARD: {
@@ -187,6 +194,27 @@ class ActivityData {
         return new ActivityData();
     }
 
+    // Vibrate and sound a reminder signal that the activity has been saved
+    // and the user can exit the app.
+    function _doReminderSignal() as Void {
+        var vibeProfiles =
+        [
+            new Attention.VibeProfile(50, 2000), // On for two seconds
+        ];
+
+        Attention.vibrate(vibeProfiles);
+
+        var toneProfile =
+        [
+            new Attention.ToneProfile( 2500, 250),
+            new Attention.ToneProfile( 5000, 250),
+            new Attention.ToneProfile(10000, 250),
+            new Attention.ToneProfile( 5000, 250),
+            new Attention.ToneProfile( 2500, 250),
+        ];
+        Attention.playTone({:toneProfile=>toneProfile});
+    }
+
     var state = AppState.INITIAL;
     var activityTypes as Array<ActivityType> = [
             new ActivityType("WALK", "Walking", Activity.SPORT_WALKING),
@@ -204,4 +232,6 @@ class ActivityData {
     var batteryLevel as Number or Null;
     var activitySession as Session or Null;
     var selectedMenuItem = MenuItem.NONE;
+
+    private var savedReminderTimer;
 }

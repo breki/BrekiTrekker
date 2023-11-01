@@ -27,6 +27,7 @@ the data simulation.
 ### 2023-11-01
 
 - Use a more prominent color for temperature.
+- Activity saved sound and vibration reminder.
 
 ### 2023-10-31
 
