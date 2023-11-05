@@ -88,6 +88,7 @@ class ActivityDisplay extends WatchUi.Drawable {
         _drawElapsedDistance(dc);    
         _drawTemperature(dc);
         _drawBatteryLevel(dc);
+        _drawEta(dc);
 
         switch (_activityData.state) {
             case AppState.MENU_DISPLAY: { 
@@ -260,6 +261,31 @@ class ActivityDisplay extends WatchUi.Drawable {
             var indicatorWidth = 60 * _activityData.batteryLevel / 100;
             dc.drawArc(centerX, centerY, centerX-3, 
                 Graphics.ARC_COUNTER_CLOCKWISE, 240, 240 + indicatorWidth);
+        }
+    }
+
+    function _drawEta(dc as Dc) as Void {
+        // todo: recalcuate this only every 10 seconds
+        if (_activityData.startLocation != null 
+            && _activityData.currentLocation != null) {
+            var distanceInMeters = distance(
+                _activityData.startLocation, _activityData.currentLocation);
+
+            var speedMperS = 0.8;
+            var secondsToGetBack = distanceInMeters / speedMperS;            
+            var durationToGetBack 
+                = new Time.Duration(secondsToGetBack.toNumber());
+            var now = Time.now();
+            var eta = Gregorian.info(now.add(durationToGetBack), Time.FORMAT_MEDIUM);
+
+            var etaText = Lang.format(
+                "|$1$:$2$|", [eta.hour.format("%02d"), eta.min.format("%02d")]);
+
+            var hvCenter = 
+                Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
+
+            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(centerX, 35, Graphics.FONT_XTINY, etaText, hvCenter);
         }
     }
 

@@ -24,6 +24,10 @@ the data simulation.
 
 ## Changelog
 
+### 2023-11-05
+
+- Add ETA display.
+
 ### 2023-11-01
 
 - Use a more prominent color for temperature.

@@ -2,6 +2,7 @@ import Toybox.Activity;
 import Toybox.ActivityRecording;
 import Toybox.Attention;
 import Toybox.Lang;
+import Toybox.Position;
 import Toybox.Time;
 import Toybox.Timer;
 
@@ -223,6 +224,8 @@ class ActivityData {
         ];
     var selectedActivityTypeIndex = 0;
     var startTime as Moment or Null;
+    var startLocation as Location or Null;
+    var currentLocation as Location or Null;
     var elapsedDistance as Number or Null;
     var heartRate = new ActivityParameter();
     var barometricAltitude = new ActivityParameter();

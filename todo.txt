@@ -1,16 +1,20 @@
-- temperature text color should be white
+- display ETA
+    - recalculate it only every 10 seconds to save battery
 
-- stop any battery-hungry activity once the activity has been saved
+- warning when you're very near the starting point for some time
+
+- warning when you're stationary for some time
+    - but then we need support for pausing the activity
+
+
+- allow the user to store the elevation for the starting location so the app
+    can next time warn the user that they have to calibrate the elevation
+
+- add support for yoga activity?
+
+- show calories
 
 - add license file
-
-- should we use maxHeartRate from ActivityInfo?
-
-- ascent is not correctly calculated, for some reason (start at +10 right at the start) 
-    - that's because we start recording the altitude at the initial screen and 
-        I calibrated the altitude after that
-
-- use elapsedTime instead of using a custom timer
 
 - indicate when the GPS is ready
 	- can we handle "GPS is ready" event?
