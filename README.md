@@ -27,6 +27,7 @@ the data simulation.
 ### 2023-11-18
 
 - ETA should take elevation difference into account.
+- Better vertical alignment of the menu.
 
 
 ### 2023-11-05

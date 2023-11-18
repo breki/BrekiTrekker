@@ -347,8 +347,10 @@ class ActivityDisplay extends WatchUi.Drawable {
             dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_BLACK);
         }
 
+        var menuY = 28;
+
         dc.drawText(
-            centerX, 30, Graphics.FONT_TINY, 
+            centerX, menuY, Graphics.FONT_TINY, 
             "         SAVE & STOP         ", Graphics.TEXT_JUSTIFY_CENTER);
 
         if (_activityData.selectedMenuItem == MenuItem.DISCARD) {
@@ -359,8 +361,9 @@ class ActivityDisplay extends WatchUi.Drawable {
         }
 
         dc.drawText(
-            centerX, 60, Graphics.FONT_TINY, 
-            "               DISCARD               ", Graphics.TEXT_JUSTIFY_CENTER);
+            centerX, menuY + 30, Graphics.FONT_TINY, 
+            "               DISCARD               ", 
+            Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     private var screenWidth;
