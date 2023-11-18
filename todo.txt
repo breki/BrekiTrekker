@@ -1,12 +1,13 @@
-- display ETA
-    - take into account the elevation difference
-    - recalculate it only every 10 seconds to save battery
+- disable sound for saved activity warning
 
 - warning when you're very near the starting point for some time
+    - how to detect this?
+
+- display ETA
+    - recalculate it only every 10 seconds to save battery
 
 - warning when you're stationary for some time
     - but then we need support for pausing the activity
-
 
 - allow the user to store the elevation for the starting location so the app
     can next time warn the user that they have to calibrate the elevation

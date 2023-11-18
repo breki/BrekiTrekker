@@ -30,7 +30,6 @@ class ActivityData {
                         activitySession.stop();
                         activitySession.save();
                         activitySession = null;
-                        // todo 0: create a reminder timer
                         savedReminderTimer = new Timer.Timer();
                         var repeat = true; // the Timer will repeat until stop() is called
                         savedReminderTimer.start(
@@ -205,15 +204,17 @@ class ActivityData {
 
         Attention.vibrate(vibeProfiles);
 
-        var toneProfile =
-        [
-            new Attention.ToneProfile( 2500, 250),
-            new Attention.ToneProfile( 5000, 250),
-            new Attention.ToneProfile(10000, 250),
-            new Attention.ToneProfile( 5000, 250),
-            new Attention.ToneProfile( 2500, 250),
-        ];
-        Attention.playTone({:toneProfile=>toneProfile});
+        // Disabled the sound since we don't really need it here.
+        // I've left the code here for later use.
+        // var toneProfile =
+        // [
+        //     new Attention.ToneProfile( 2500, 250),
+        //     new Attention.ToneProfile( 5000, 250),
+        //     new Attention.ToneProfile(10000, 250),
+        //     new Attention.ToneProfile( 5000, 250),
+        //     new Attention.ToneProfile( 2500, 250),
+        // ];
+        // Attention.playTone({:toneProfile=>toneProfile});
     }
 
     var state = AppState.INITIAL;

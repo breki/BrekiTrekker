@@ -28,7 +28,7 @@ the data simulation.
 
 - ETA should take elevation difference into account.
 - Better vertical alignment of the menu.
-
+- Activity saved reminder no longer makes any sound.
 
 ### 2023-11-05
 
