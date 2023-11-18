@@ -268,15 +268,21 @@ class ActivityDisplay extends WatchUi.Drawable {
         // todo: recalcuate this only every 10 seconds
         if (_activityData.startLocation != null 
             && _activityData.currentLocation != null) {
-            var distanceInMeters = distance(
-                _activityData.startLocation, _activityData.currentLocation);
+            var distanceInMeters = _activityData.startLocation.distanceTo(
+                _activityData.currentLocation);
+            var elevationDifference 
+                = _activityData.currentLocation.elevation 
+                - _activityData.startLocation.elevation;
+
+            // todo: use elevation difference in the ETA calculation
 
             var speedMperS = 0.8;
             var secondsToGetBack = distanceInMeters / speedMperS;            
             var durationToGetBack 
                 = new Time.Duration(secondsToGetBack.toNumber());
             var now = Time.now();
-            var eta = Gregorian.info(now.add(durationToGetBack), Time.FORMAT_MEDIUM);
+            var eta = Gregorian.info(
+                now.add(durationToGetBack), Time.FORMAT_MEDIUM);
 
             var etaText = Lang.format(
                 "|$1$:$2$|", [eta.hour.format("%02d"), eta.min.format("%02d")]);

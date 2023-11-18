@@ -1,4 +1,5 @@
 - display ETA
+    - take into account the elevation difference
     - recalculate it only every 10 seconds to save battery
 
 - warning when you're very near the starting point for some time

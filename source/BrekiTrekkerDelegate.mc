@@ -35,10 +35,12 @@ class BrekiTrekkerDelegate extends WatchUi.BehaviorDelegate {
     function onPosition(info as Position.Info) as Void {
         // record the starting position of the activity
         if (activityData.startLocation == null) {
-            activityData.startLocation = info.position;
+            activityData.startLocation 
+                = new ActivityLocation(info.position, info.altitude);
         }
 
-        activityData.currentLocation = info.position;
+        activityData.currentLocation 
+            = new ActivityLocation(info.position, info.altitude);
 
         activityData.setGpsAltitude(info.altitude);
     }

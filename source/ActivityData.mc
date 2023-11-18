@@ -224,8 +224,8 @@ class ActivityData {
         ];
     var selectedActivityTypeIndex = 0;
     var startTime as Moment or Null;
-    var startLocation as Location or Null;
-    var currentLocation as Location or Null;
+    var startLocation as ActivityLocation or Null;
+    var currentLocation as ActivityLocation or Null;
     var elapsedDistance as Number or Null;
     var heartRate = new ActivityParameter();
     var barometricAltitude = new ActivityParameter();
