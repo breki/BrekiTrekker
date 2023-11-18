@@ -274,10 +274,15 @@ class ActivityDisplay extends WatchUi.Drawable {
                 = _activityData.currentLocation.elevation 
                 - _activityData.startLocation.elevation;
 
+            // we use a simple Pythagorean theorem to calculate the distance
+            var distanceWithElevationInMeters = Math.sqrt(
+                distanceInMeters * distanceInMeters 
+                + elevationDifference * elevationDifference);
+
             // todo: use elevation difference in the ETA calculation
 
             var speedMperS = 0.8;
-            var secondsToGetBack = distanceInMeters / speedMperS;            
+            var secondsToGetBack = distanceWithElevationInMeters / speedMperS;            
             var durationToGetBack 
                 = new Time.Duration(secondsToGetBack.toNumber());
             var now = Time.now();
