@@ -24,6 +24,11 @@ the data simulation.
 
 ## Changelog
 
+### 2023-11-18
+
+- ETA should take elevation difference into account.
+
+
 ### 2023-11-05
 
 - Add ETA display.
