@@ -146,7 +146,7 @@ class ActivityData {
 
     function startActivity() {
         state = AppState.RUNNING;
-        startTime = Time.now(); //.add(new Duration(-6444));
+        startTime = Time.now();
 
         var activityType = self.activityType();
         activitySession = ActivityRecording.createSession({
@@ -155,6 +155,8 @@ class ActivityData {
             // :sensorLogger => 
         });
         activitySession.start();
+
+        backAtStartingPointTimer = new Timer.Timer();
     }
 
     function activityDuration() as Duration or Null {
@@ -190,6 +192,17 @@ class ActivityData {
         temperature.setValue(value);
     }
 
+    // Activate the "back at starting point" reminder timer, if it is not 
+    // already running.
+    function startBackAtStartingPointTimer() {
+        if (!backAtStartingPointTimerRunning) {
+            var repeat = false; 
+            backAtStartingPointTimer.start(
+                method(:_doBackAtStartingPointSignal), 10000, repeat);
+            backAtStartingPointTimerRunning = true;
+        }            
+    }
+
     static function initial() as ActivityData {
         return new ActivityData();
     }
@@ -217,6 +230,25 @@ class ActivityData {
         // Attention.playTone({:toneProfile=>toneProfile});
     }
 
+    function _doBackAtStartingPointSignal() as Void {
+        backAtStartingPointTimerRunning = false;
+
+        // After the timer pause, if we are less than 20 meters from the 
+        // starting point, warn the user that they should stop the activity
+        // by vibrating.
+        if (distanceToStartLocation != null && distanceToStartLocation < 20) {
+            var vibeProfiles =
+            [
+                new Attention.VibeProfile(50, 2000), // On for two seconds
+            ];
+
+            Attention.vibrate(vibeProfiles);
+
+            // Then restart the timer for the next warning.
+            startBackAtStartingPointTimer();
+        }
+    }
+
     var state = AppState.INITIAL;
     var activityTypes as Array<ActivityType> = [
             new ActivityType("WALK", "Walking", Activity.SPORT_WALKING),
@@ -228,6 +260,7 @@ class ActivityData {
     var startLocation as ActivityLocation or Null;
     var currentLocation as ActivityLocation or Null;
     var elapsedDistance as Number or Null;
+    var distanceToStartLocation as Number or Null;
     var heartRate = new ActivityParameter();
     var barometricAltitude = new ActivityParameter();
     var gpsAltitude = new ActivityParameter();
@@ -238,4 +271,6 @@ class ActivityData {
     var selectedMenuItem = MenuItem.NONE;
 
     private var savedReminderTimer;
+    private var backAtStartingPointTimer;
+    private var backAtStartingPointTimerRunning as Boolean = false;
 }

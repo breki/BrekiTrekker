@@ -270,6 +270,22 @@ class ActivityDisplay extends WatchUi.Drawable {
             && _activityData.currentLocation != null) {
             var distanceInMeters = _activityData.startLocation.distanceTo(
                 _activityData.currentLocation);
+
+            _activityData.distanceToStartLocation = distanceInMeters;
+
+            var minimumElapsedDistanceForGetBackReminder = 200;
+
+            // Are we back near the starting point? If the distance to the
+            // starting point is less than 20 meters and we have already
+            // covered more than 200 meters of activity, it is safe to assume
+            // we are nearing the starting point, so we can activate the 
+            // "stop the activity" reminder timer.
+            if (distanceInMeters < 20 
+                && _activityData.elapsedDistance != null 
+                && _activityData.elapsedDistance > minimumElapsedDistanceForGetBackReminder) {
+                _activityData.startBackAtStartingPointTimer();
+            }
+
             var elevationDifference 
                 = _activityData.currentLocation.elevation 
                 - _activityData.startLocation.elevation;
@@ -278,8 +294,6 @@ class ActivityDisplay extends WatchUi.Drawable {
             var distanceWithElevationInMeters = Math.sqrt(
                 distanceInMeters * distanceInMeters 
                 + elevationDifference * elevationDifference);
-
-            // todo: use elevation difference in the ETA calculation
 
             var speedMperS = 0.8;
             var secondsToGetBack = distanceWithElevationInMeters / speedMperS;            

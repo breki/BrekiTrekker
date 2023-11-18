@@ -26,6 +26,7 @@ the data simulation.
 
 ### 2023-11-18
 
+- Vibrate when the user is back near the starting point.
 - ETA should take elevation difference into account.
 - Better vertical alignment of the menu.
 - Activity saved reminder no longer makes any sound.
