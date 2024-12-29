@@ -1,3 +1,8 @@
+- new todos for Epix 2 version
+    - add support for showing the map on the second screen 
+    - sound on each 1 kilometer
+
+
 - warning when you're very near the starting point for some time
     - how to detect this?
         - it should only work after some minimum distance has been covered

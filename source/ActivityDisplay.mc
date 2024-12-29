@@ -52,7 +52,7 @@ class ActivityDisplay extends WatchUi.Drawable {
 
         var activityTypes = _activityData.activityTypes as Array<ActivityType>;
         var activitiesCount = activityTypes.size();
-        var startingY = centerY - (activitiesCount - 1) * 30 / 2;
+        var startingY = centerY - (activitiesCount - 1) * MENU_TEXT_HEIGHT / 2;
 
         for (var i = 0; i < activitiesCount; i++) {
 
@@ -66,7 +66,8 @@ class ActivityDisplay extends WatchUi.Drawable {
                 dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_TRANSPARENT);
             }
             // dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(centerX, startingY + i * 30, font, text, justification);
+            dc.drawText(
+                centerX, startingY + i * MENU_TEXT_HEIGHT, font, text, justification);
         }
 
         if (_activityData.barometricAltitude.currentValue != null) {
@@ -75,7 +76,7 @@ class ActivityDisplay extends WatchUi.Drawable {
             var altText = Lang.format("$1$m", 
                 [_activityData.barometricAltitude.currentValue.format("%d")]);
 
-            dc.drawText(centerX, startingY + (activitiesCount + 1) * 30, 
+            dc.drawText(centerX, startingY + (activitiesCount + 1) * MENU_TEXT_HEIGHT, 
                 Graphics.FONT_TINY, altText, justification); 
         }
     }
@@ -118,7 +119,7 @@ class ActivityDisplay extends WatchUi.Drawable {
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
 
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX, 15, Graphics.FONT_MEDIUM, timeText, hvCenter);
+        dc.drawText(centerX, CLOCK_Y, Graphics.FONT_MEDIUM, timeText, hvCenter);
     }
 
     function _drawTimer(dc as Dc) as Void {
@@ -375,7 +376,7 @@ class ActivityDisplay extends WatchUi.Drawable {
         }
 
         dc.drawText(
-            centerX, menuY + 30, Graphics.FONT_TINY, 
+            centerX, menuY + MENU_TEXT_HEIGHT, Graphics.FONT_TINY, 
             "               DISCARD               ", 
             Graphics.TEXT_JUSTIFY_CENTER);
     }
@@ -385,4 +386,7 @@ class ActivityDisplay extends WatchUi.Drawable {
     private var centerX;
     private var centerY;
     private var _activityData;
+ 
+    private const CLOCK_Y = 25;
+    private const MENU_TEXT_HEIGHT = 45;
 }
